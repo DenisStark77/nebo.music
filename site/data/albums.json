@@ -1,0 +1,15 @@
+{
+  "feature_album_id": "6oGjVpZG0kKFQ9i0wWhb5Y",
+  "feature_album_title": "Her Sacred Pulse",
+  "albums": [
+    { "id": "6oGjVpZG0kKFQ9i0wWhb5Y", "title": "Her Sacred Pulse", "kind": "EP", "year": 2025 },
+    { "id": "1EumG1yac5kFyncwuQQTsS", "title": "Asato Ma (432Hz)", "kind": "Single", "year": 2025 },
+    { "id": "2BpdAshh3ibd1tEKm3ibxw", "title": "Cosmos Lullaby", "kind": "Single", "year": 2025 },
+    { "id": "4Kq7OnqGJr9JaxZLCFGkCV", "title": "Mahamrityunjaya Mantra 432hz", "kind": "Single", "year": 2025 },
+    { "id": "7eB0unNPdtl3jGGh4JUEXs", "title": "Сон-Ц", "kind": "Album", "year": 2021 },
+    { "id": "3DRGmnPJckGYNX7z72tPG4", "title": "Sundance", "kind": "Album", "year": 2021 },
+    { "id": "7oVXtOjL9pzTRB8wnyIIqo", "title": "Moon Songs", "kind": "Album", "year": 2020 },
+    { "id": "3Rk5CSLM2sZb1JRwWQaNmt", "title": "Концерт для мамы с младенцем", "kind": "Album", "year": 2020 },
+    { "id": "3nfua3BjKkPLqPyGlQCN9O", "title": "Nebo Music Live in Dubai", "kind": "Album", "year": 2017 }
+  ]
+}
