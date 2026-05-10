@@ -34,6 +34,29 @@
     document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
   }
 
+  // --- Spotify album covers (via oEmbed) ---
+  // The .album cards ship with a gradient placeholder; on load we fetch the
+  // real cover art from Spotify's public oEmbed endpoint and layer it on top.
+  // If the fetch fails the gradient stays as the fallback.
+  document.querySelectorAll('a.album[href*="open.spotify.com/album/"]').forEach((a) => {
+    const cover = a.querySelector('.cover');
+    if (!cover) return;
+    const url = `https://open.spotify.com/oembed?url=${encodeURIComponent(a.href)}`;
+    fetch(url)
+      .then((r) => r.ok ? r.json() : null)
+      .then((data) => {
+        const thumb = data && data.thumbnail_url;
+        if (!thumb) return;
+        const img = new Image();
+        img.onload = () => {
+          const existing = cover.style.backgroundImage;
+          cover.style.backgroundImage = `url("${thumb}"), ${existing}`;
+        };
+        img.src = thumb;
+      })
+      .catch(() => {});
+  });
+
   // --- Painting lightbox ---
   const lightbox = document.querySelector('.lightbox');
   if (lightbox) {
