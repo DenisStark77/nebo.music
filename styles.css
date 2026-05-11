@@ -206,12 +206,48 @@ p:last-child { margin-bottom: 0; }
 
 /* ---- Listen / Albums ---- */
 
-.spotify-feature {
-  margin: 32px 0 64px;
-  border: 1px solid var(--hairline);
-  background: var(--paper);
+.videos {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin: 32px 0 64px;
 }
-.spotify-feature iframe { display: block; width: 100%; }
+.video {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  transition: border-color 0.2s ease;
+}
+.video:hover { border-color: var(--ink); }
+.v-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+.v-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.6s ease;
+}
+.video:hover .v-frame img { transform: scale(1.03); }
+.v-play {
+  position: absolute; top: 50%; left: 50%;
+  width: 54px; height: 54px;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 20, 0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.video:hover .v-play { background: rgba(20, 20, 20, 0.75); }
+.v-play::after {
+  content: ''; display: block;
+  width: 0; height: 0;
+  border-left: 14px solid #fff;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  margin-left: 4px;
+}
 
 .albums {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -438,6 +474,7 @@ footer .colophon {
   .stats > div:nth-child(4) { border-left: none; }
 
   .albums { grid-template-columns: repeat(2, 1fr); }
+  .videos { grid-template-columns: repeat(2, 1fr); }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .cards   { grid-template-columns: 1fr; }
   .books   { grid-template-columns: 1fr; }
@@ -452,6 +489,7 @@ footer .colophon {
   section { padding: 72px 0; }
   .gallery { grid-template-columns: 1fr; }
   .albums  { grid-template-columns: 1fr; }
+  .videos  { grid-template-columns: 1fr; }
   footer { padding: 56px 24px; }
   footer .cols { grid-template-columns: 1fr; gap: 28px; }
   .pullquote { padding-left: 20px; margin: 40px 0; }
