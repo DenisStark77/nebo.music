@@ -249,6 +249,12 @@ p:last-child { margin-bottom: 0; }
   margin-left: 4px;
 }
 
+.kirtan-portrait {
+  margin: 56px auto 0;
+  max-width: 480px;
+}
+.kirtan-portrait img { width: 100%; height: auto; display: block; }
+
 .albums {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 24px; margin: 32px 0 48px;
