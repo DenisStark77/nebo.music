@@ -207,8 +207,8 @@ p:last-child { margin-bottom: 0; }
 /* ---- Listen / Albums ---- */
 
 .videos {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 24px; margin: 32px 0 64px;
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 16px; margin: 32px 0 64px;
 }
 .video {
   display: block; text-decoration: none; color: inherit;
@@ -474,7 +474,7 @@ footer .colophon {
   .stats > div:nth-child(4) { border-left: none; }
 
   .albums { grid-template-columns: repeat(2, 1fr); }
-  .videos { grid-template-columns: repeat(2, 1fr); }
+  .videos { grid-template-columns: repeat(3, 1fr); }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .cards   { grid-template-columns: 1fr; }
   .books   { grid-template-columns: 1fr; }
@@ -490,6 +490,9 @@ footer .colophon {
   .gallery { grid-template-columns: 1fr; }
   .albums  { grid-template-columns: 1fr; }
   .videos  { grid-template-columns: 1fr; }
+  .video:nth-child(3),
+  .video:nth-child(5),
+  .video:nth-child(6) { display: none; }
   footer { padding: 56px 24px; }
   footer .cols { grid-template-columns: 1fr; gap: 28px; }
   .pullquote { padding-left: 20px; margin: 40px 0; }
