@@ -105,9 +105,10 @@ nav.top .menu-btn { display: none; background: none; border: 0; cursor: pointer;
 .hero .hero-bg {
   position: absolute; inset: 0;
   background-image: url('images/kirtan/hero-kirtan.jpg');
-  background-size: cover; background-position: center;
+  background-size: cover; background-position: center top;
   filter: saturate(0.95) brightness(0.65);
   z-index: 0;
+  transform-origin: top center;
   animation: drift 60s ease-in-out infinite alternate;
 }
 .hero .hero-veil {
@@ -135,7 +136,7 @@ nav.top .menu-btn { display: none; background: none; border: 0; cursor: pointer;
 
 @keyframes drift {
   from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to   { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
+  to   { transform: scale(1.10) translate3d(-1.5%, 1%, 0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero .hero-bg { animation: none; transform: scale(1.04); }
