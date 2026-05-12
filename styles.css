@@ -388,7 +388,6 @@ p:last-child { margin-bottom: 0; }
 .book .b-body { flex: 1; min-width: 0; }
 .book .b-cover {
   flex: 0 0 96px;
-  background: var(--paper-deep);
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
