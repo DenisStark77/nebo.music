@@ -12,7 +12,7 @@
   const SUPPORTED = ['en', 'ru'];
   const TITLES = {
     en: 'nebo.music — Jane Stark · the voice of your soul',
-    ru: 'nebo.music — Джейн Старк · голос вашей души'
+    ru: 'nebo.music — Женя Старк · голос вашей души'
   };
 
   function applyLang(lang) {
