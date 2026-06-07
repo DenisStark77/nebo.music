@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>nebo.music — Jane Stark · the voice of your soul</title>
   <meta name="description" content="Music, mantra, and the practices that keep the voice open. Kirtans, family constellations, voice awakening, painting, and poetry by Jane Stark.">
-  <meta name="keywords" content="Jane Stark, nebo music, kirtan, mantra, 432 Hz, bhakti, family constellations, systemic constellations, Leela, voice awakening, meditation retreat, Costa Rica retreat, Russian poetry, Sanskrit chant, Evgenia Stark">
+  <meta name="keywords" content="Jane Stark, Джейн Старк, nebo music, kirtan, киртан, mantra, мантра, 432 Hz, bhakti, family constellations, расстановки, Leela, Лила, voice awakening, пробуждение голоса, meditation retreat, Costa Rica retreat, Russian poetry, русская поэзия, Sanskrit chant, Evgenia Stark, Евгения Старк">
   <meta name="author" content="Jane Stark">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nebo.music/">
@@ -17,6 +17,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nebo.music/">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="nebo.music — Jane Stark">
@@ -45,6 +46,18 @@
   }
   </script>
 
+  <!-- Set language before body renders to prevent flash of wrong language -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('nebo-lang');
+      var lang = (saved === 'ru' || saved === 'en') ? saved
+        : ((navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+      document.documentElement.lang = lang;
+    } catch (e) {}
+  })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -53,20 +66,27 @@
 </head>
 <body>
 
-<a class="sr-only" href="#main">Skip to content</a>
+<a class="sr-only" href="#main"><span lang="en">Skip to content</span><span lang="ru">К основному содержимому</span></a>
 
 <nav class="top" aria-label="Primary">
   <a class="wordmark" href="#top">nebo<span class="dot">·</span>music</a>
-  <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
-  <div class="links">
-    <a href="#listen">Listen</a>
-    <a href="#about">About</a>
-    <a href="#kirtan">Kirtan</a>
-    <a href="#homestead">Homestead</a>
-    <a href="#constellations">Constellations</a>
-    <a href="#voice">Voice</a>
-    <a href="#poetry">Poetry</a>
-    <a href="#painting">Painting</a>
+  <div class="nav-right">
+    <div class="links">
+      <a href="#listen"><span lang="en">Listen</span><span lang="ru">Слушать</span></a>
+      <a href="#about"><span lang="en">About</span><span lang="ru">О Джейн</span></a>
+      <a href="#kirtan"><span lang="en">Kirtan</span><span lang="ru">Киртан</span></a>
+      <a href="#homestead"><span lang="en">Homestead</span><span lang="ru">Дом</span></a>
+      <a href="#constellations"><span lang="en">Constellations</span><span lang="ru">Расстановки</span></a>
+      <a href="#voice"><span lang="en">Voice</span><span lang="ru">Голос</span></a>
+      <a href="#poetry"><span lang="en">Poetry</span><span lang="ru">Стихи</span></a>
+      <a href="#painting"><span lang="en">Painting</span><span lang="ru">Живопись</span></a>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">·</span>
+      <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </nav>
 
@@ -77,12 +97,15 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="hero-inner container">
-    <div class="label">Jane Stark · nebo · music</div>
-    <h1>the voice<br>of <em>your soul</em></h1>
-    <p class="sub">Music, mantra, and the practices that keep your authentic voice open.</p>
+    <div class="label" lang="en">Jane Stark · nebo · music</div>
+    <div class="label" lang="ru">Джейн Старк · небо · музыка</div>
+    <h1 lang="en">the voice<br>of <em>your soul</em></h1>
+    <h1 lang="ru">голос<br><em>вашей души</em></h1>
+    <p class="sub" lang="en">Music, mantra, and the practices that keep your authentic voice open.</p>
+    <p class="sub" lang="ru">Музыка, мантра и практики, что хранят ваш подлинный голос открытым.</p>
     <div class="ctas">
-      <a class="btn on-dark" href="#listen">Listen</a>
-      <a class="btn on-dark" href="#constellations">Sit in a circle</a>
+      <a class="btn on-dark" href="#listen"><span lang="en">Listen</span><span lang="ru">Слушать</span></a>
+      <a class="btn on-dark" href="#constellations"><span lang="en">Sit in a circle</span><span lang="ru">Сесть в круг</span></a>
     </div>
   </div>
 </header>
@@ -91,9 +114,12 @@
 <section id="listen" class="bg-deep">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 02 · Listen</div>
-      <h2 class="sec-title">Listen</h2>
-      <p>Jane Stark has been turning prayer, medicine, and love into music since 2011. Her catalogue moves between mantra, lullaby, and original songs in Russian, English, and Sanskrit — most of it tuned to 432 Hz, all of it shaped by training in Varanasi and New York and a tour through Russia with Krishna Das.</p>
+      <div class="sec-label" lang="en">§ 02 · Listen</div>
+      <div class="sec-label" lang="ru">§ 02 · Слушать</div>
+      <h2 class="sec-title" lang="en">Listen</h2>
+      <h2 class="sec-title" lang="ru">Слушать</h2>
+      <p lang="en">Jane Stark has been turning prayer, medicine, and love into music since 2011. Her catalogue moves between mantra, lullaby, and original songs in Russian, English, and Sanskrit — most of it tuned to 432 Hz, all of it shaped by training in Varanasi and New York and a tour through Russia with Krishna Das.</p>
+      <p lang="ru">С 2011 года Джейн Старк превращает молитву, медицину и любовь в музыку. Её каталог переходит от мантры к колыбельной и к авторским песням на русском, английском и санскрите — большая часть звучит в строе 432 Гц, и всё это сложилось из обучения в Варанаси и Нью-Йорке и тура по России с Кришной Дасом.</p>
     </div>
 
     <div class="videos reveal" aria-label="Videos">
@@ -139,48 +165,56 @@
       <a class="album" href="https://open.spotify.com/album/6oGjVpZG0kKFQ9i0wWhb5Y" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#C99A9A,#C97B3F)"></div>
         <div class="a-title">Her Sacred Pulse</div>
-        <div class="a-meta">EP · 2025</div>
+        <div class="a-meta" lang="en">EP · 2025</div>
+        <div class="a-meta" lang="ru">EP · 2025</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/1EumG1yac5kFyncwuQQTsS" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#C97B3F,#1F3147)"></div>
         <div class="a-title">Asato Ma (432 Hz)</div>
-        <div class="a-meta">Single · 2025</div>
+        <div class="a-meta" lang="en">Single · 2025</div>
+        <div class="a-meta" lang="ru">Сингл · 2025</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/2BpdAshh3ibd1tEKm3ibxw" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#3F4F3D,#C99A9A)"></div>
         <div class="a-title">Cosmos Lullaby</div>
-        <div class="a-meta">Single · 2025</div>
+        <div class="a-meta" lang="en">Single · 2025</div>
+        <div class="a-meta" lang="ru">Сингл · 2025</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/4Kq7OnqGJr9JaxZLCFGkCV" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#1F3147,#C97B3F)"></div>
         <div class="a-title">Mahamrityunjaya 432 Hz</div>
-        <div class="a-meta">Single · 2025</div>
+        <div class="a-meta" lang="en">Single · 2025</div>
+        <div class="a-meta" lang="ru">Сингл · 2025</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/3DRGmnPJckGYNX7z72tPG4" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#C99A9A,#3F4F3D)"></div>
         <div class="a-title">Sundance</div>
-        <div class="a-meta">Album · 2021</div>
+        <div class="a-meta" lang="en">Album · 2021</div>
+        <div class="a-meta" lang="ru">Альбом · 2021</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/7eB0unNPdtl3jGGh4JUEXs" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#1F3147,#C99A9A)"></div>
         <div class="a-title">Сон-Ц</div>
-        <div class="a-meta">Album · 2021</div>
+        <div class="a-meta" lang="en">Album · 2021</div>
+        <div class="a-meta" lang="ru">Альбом · 2021</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/7oVXtOjL9pzTRB8wnyIIqo" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#C97B3F,#3F4F3D)"></div>
         <div class="a-title">Moon Songs</div>
-        <div class="a-meta">Album · 2020</div>
+        <div class="a-meta" lang="en">Album · 2020</div>
+        <div class="a-meta" lang="ru">Альбом · 2020</div>
       </a>
       <a class="album" href="https://open.spotify.com/album/3Rk5CSLM2sZb1JRwWQaNmt" target="_blank" rel="noopener">
         <div class="cover" style="background-image:linear-gradient(135deg,#3F4F3D,#1F3147)"></div>
         <div class="a-title">Концерт для мамы</div>
-        <div class="a-meta">Album · 2020</div>
+        <div class="a-meta" lang="en">Album · 2020</div>
+        <div class="a-meta" lang="ru">Альбом · 2020</div>
       </a>
     </div>
 
     <div style="text-align:center" class="reveal">
-      <a class="btn" href="https://open.spotify.com/artist/65gZEqZHTi93CDm1PPctWs" target="_blank" rel="noopener">Listen on Spotify</a>
-      <a class="btn ghost" href="https://www.youtube.com/@janestark" target="_blank" rel="noopener" style="margin-left:8px">Watch on YouTube</a>
+      <a class="btn" href="https://open.spotify.com/artist/65gZEqZHTi93CDm1PPctWs" target="_blank" rel="noopener"><span lang="en">Listen on Spotify</span><span lang="ru">Слушать на Spotify</span></a>
+      <a class="btn ghost" href="https://www.youtube.com/@janestark" target="_blank" rel="noopener" style="margin-left:8px"><span lang="en">Watch on YouTube</span><span lang="ru">Смотреть на YouTube</span></a>
     </div>
   </div>
 </section>
@@ -189,17 +223,27 @@
 <section id="about">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 03 · About</div>
-      <h2 class="sec-title">About <em>Jane</em></h2>
+      <div class="sec-label" lang="en">§ 03 · About</div>
+      <div class="sec-label" lang="ru">§ 03 · О Джейн</div>
+      <h2 class="sec-title" lang="en">About <em>Jane</em></h2>
+      <h2 class="sec-title" lang="ru">О <em>Джейн</em></h2>
 
-      <div class="pullquote">
+      <div class="pullquote" lang="en">
         I sing thanks to the constellations.
         <span class="by">— Jane Stark</span>
       </div>
-      <p>Jane is a pathfinder. Someone who has spent 15 years searching for peace, moving through communities, building new ones, always looking outside the mainstream for what is real and what endures. She is a guide of self-awareness practices, artist, composer, singer, poet. She holds a PhD in world economy, founded the <em>Noble Poetry Club</em> theatre in Dubai, and has published three poetry books. Her musical education merges eastern (Varanasi, India) and western (New York, USA) schools.</p>
-      <p>Born in Lithuania, she has lived in Russia, Italy, the USA, Belgium, the UAE, and Georgia, and for the past six years in Costa Rica.</p>
-      <p>She is interested in prayer, medicine, and love turned into music. She performs in a way that often moves audiences to tears and to silence.</p>
-      <p>She does not call her work a method. The kirtans, the constellations, the dances, the voice sessions, the painting, the poetry — these are simply the shapes her practice takes. The thread that runs through them is older than any of them.</p>
+      <div class="pullquote" lang="ru">
+        Я пою из благодарности расстановкам.
+        <span class="by">— Джейн Старк</span>
+      </div>
+      <p lang="en">Jane is a pathfinder. Someone who has spent 15 years searching for peace, moving through communities, building new ones, always looking outside the mainstream for what is real and what endures. She is a guide of self-awareness practices, artist, composer, singer, poet. She holds a PhD in world economy, founded the <em>Noble Poetry Club</em> theatre in Dubai, and has published three poetry books. Her musical education merges eastern (Varanasi, India) and western (New York, USA) schools.</p>
+      <p lang="ru">Джейн — следопыт. Человек, который пятнадцать лет ищет покой: проходит через сообщества, строит новые, всегда смотрит за пределы мейнстрима — туда, где живёт настоящее и долговечное. Она — проводник практик самоосознания, художник, композитор, певица, поэт. У неё степень PhD по мировой экономике; она основала театр <em>Noble Poetry Club</em> в Дубае и выпустила три поэтические книги. Её музыкальное образование соединяет восточную школу (Варанаси, Индия) и западную (Нью-Йорк, США).</p>
+      <p lang="en">Born in Lithuania, she has lived in Russia, Italy, the USA, Belgium, the UAE, and Georgia, and for the past six years in Costa Rica.</p>
+      <p lang="ru">Родилась в Литве, жила в России, Италии, США, Бельгии, ОАЭ и Грузии. Последние шесть лет — в Коста-Рике.</p>
+      <p lang="en">She is interested in prayer, medicine, and love turned into music. She performs in a way that often moves audiences to tears and to silence.</p>
+      <p lang="ru">Ей интересно превращать молитву, медицину и любовь в музыку. Её выступления часто оставляют зал в слезах и в тишине.</p>
+      <p lang="en">She does not call her work a method. The kirtans, the constellations, the dances, the voice sessions, the painting, the poetry — these are simply the shapes her practice takes. The thread that runs through them is older than any of them.</p>
+      <p lang="ru">Она не называет это методом. Киртаны, расстановки, танцы, голосовые сессии, живопись, поэзия — это лишь формы, которые принимает её практика. Нить, проходящая через них, старше каждой из них.</p>
     </div>
   </div>
 </section>
@@ -210,56 +254,76 @@
 <section id="constellations" class="bg-deep">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 04 · Constellations & Leela</div>
-      <h2 class="sec-title">Drop the story.<br><em>Be with the feeling.</em></h2>
-      <p>Pain is an inevitable fact of life. Healing from it is our responsibility.</p>
-      <p>Traditional therapy works top-down: change the way you think to change how you feel. Constellations work the other way. The body moves intuitively, without needing to explain or reason. By removing the emotional charge of a story, you strip painful memories of their power and return that power to yourself.</p>
-      <div class="pullquote">
+      <div class="sec-label" lang="en">§ 04 · Constellations & Leela</div>
+      <div class="sec-label" lang="ru">§ 04 · Расстановки и Лила</div>
+      <h2 class="sec-title" lang="en">Drop the story.<br><em>Be with the feeling.</em></h2>
+      <h2 class="sec-title" lang="ru">Отпустите историю.<br><em>Останьтесь с чувством.</em></h2>
+      <p lang="en">Pain is an inevitable fact of life. Healing from it is our responsibility.</p>
+      <p lang="ru">Боль — неизбежная часть жизни. Исцеление от неё — наша ответственность.</p>
+      <p lang="en">Traditional therapy works top-down: change the way you think to change how you feel. Constellations work the other way. The body moves intuitively, without needing to explain or reason. By removing the emotional charge of a story, you strip painful memories of their power and return that power to yourself.</p>
+      <p lang="ru">Традиционная терапия идёт сверху вниз: меняешь то, как думаешь, чтобы изменить то, как чувствуешь. Расстановки работают иначе. Тело движется интуитивно — без необходимости объяснять или анализировать. Снимая эмоциональный заряд с истории, вы лишаете болезненные воспоминания силы — и возвращаете эту силу себе.</p>
+      <div class="pullquote" lang="en">
         Finally understanding the language my body has been speaking all along. Unlocking something I didn't know was trapped. Finally breathing fully after years of constriction.
         <span class="by">— Participants</span>
       </div>
-      <p style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-top: 48px;">After a single session, participants report</p>
+      <div class="pullquote" lang="ru">
+        Наконец-то понимаю язык, на котором моё тело говорило всё это время. Освобождаю то, о чём не знала, что оно заперто. Впервые за многие годы дышу свободно.
+        <span class="by">— Участники</span>
+      </div>
+      <p lang="en" style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-top: 48px;">After a single session, participants report</p>
+      <p lang="ru" style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-top: 48px;">После одной сессии участники отмечают</p>
     </div>
 
     <div class="stats reveal" role="list">
-      <div role="listitem"><div class="num">86%</div><div class="lbl">positive effect on wellbeing</div></div>
-      <div role="listitem"><div class="num">96%</div><div class="lbl">reduction in physical or emotional tension</div></div>
-      <div role="listitem"><div class="num">88%</div><div class="lbl">awareness of body sensations</div></div>
-      <div role="listitem"><div class="num">86%</div><div class="lbl">emotions able to move and shift</div></div>
-      <div role="listitem"><div class="num">80%</div><div class="lbl">presence with strong feelings</div></div>
-      <div role="listitem"><div class="num">74%</div><div class="lbl">integration of what felt incomplete</div></div>
+      <div role="listitem"><div class="num">86%</div><div class="lbl" lang="en">positive effect on wellbeing</div><div class="lbl" lang="ru">положительный эффект на самочувствие</div></div>
+      <div role="listitem"><div class="num">96%</div><div class="lbl" lang="en">reduction in physical or emotional tension</div><div class="lbl" lang="ru">снижение физического и эмоционального напряжения</div></div>
+      <div role="listitem"><div class="num">88%</div><div class="lbl" lang="en">awareness of body sensations</div><div class="lbl" lang="ru">осознание ощущений тела</div></div>
+      <div role="listitem"><div class="num">86%</div><div class="lbl" lang="en">emotions able to move and shift</div><div class="lbl" lang="ru">эмоции снова движутся и меняются</div></div>
+      <div role="listitem"><div class="num">80%</div><div class="lbl" lang="en">presence with strong feelings</div><div class="lbl" lang="ru">присутствие с сильными чувствами</div></div>
+      <div role="listitem"><div class="num">74%</div><div class="lbl" lang="en">integration of what felt incomplete</div><div class="lbl" lang="ru">интеграция того, что казалось незавершённым</div></div>
     </div>
 
-    <p class="narrow reveal" style="margin-top: 48px; text-align: center; font-style: italic; color: var(--ink-soft); font-size: 22px;">That is one session. Imagine immersion.</p>
+    <p class="narrow reveal" lang="en" style="margin-top: 48px; text-align: center; font-style: italic; color: var(--ink-soft); font-size: 22px;">That is one session. Imagine immersion.</p>
+    <p class="narrow reveal" lang="ru" style="margin-top: 48px; text-align: center; font-style: italic; color: var(--ink-soft); font-size: 22px;">И это — одна сессия. Представьте погружение.</p>
 
     <div class="narrow reveal" style="margin-top: 80px;">
-      <h3 style="font-family: var(--serif); font-weight: 300; font-size: 32px; margin: 0 0 32px;">Four ways to work with Jane</h3>
+      <h3 lang="en" style="font-family: var(--serif); font-weight: 300; font-size: 32px; margin: 0 0 32px;">Four ways to work with Jane</h3>
+      <h3 lang="ru" style="font-family: var(--serif); font-weight: 300; font-size: 32px; margin: 0 0 32px;">Четыре способа работать с Джейн</h3>
     </div>
 
     <div class="cards reveal">
       <div class="card">
-        <span class="num-tag">01 — Core offering</span>
-        <h3>Six-week online container</h3>
-        <p>A small online group in English, one call per week. Each participant receives a full constellation in turn; the rest of the group serves as the field — stand-in figures whose intuitive movements reveal the system. Six weeks, six gatherings, one transformation.</p>
-        <a class="card-cta" href="https://t.me/+2LtMqe6B6EM0MDUy" target="_blank" rel="noopener">Join the next group →</a>
+        <span class="num-tag" lang="en">01 — Core offering</span>
+        <span class="num-tag" lang="ru">01 — Основное предложение</span>
+        <h3 lang="en">Six-week online container</h3>
+        <h3 lang="ru">Шестинедельная онлайн-группа</h3>
+        <p lang="en">A small online group in English, one call per week. Each participant receives a full constellation in turn; the rest of the group serves as the field — stand-in figures whose intuitive movements reveal the system. Six weeks, six gatherings, one transformation.</p>
+        <p lang="ru">Небольшая онлайн-группа на английском, по одной встрече в неделю. Каждый участник по очереди получает полную расстановку; остальные становятся полем — заместителями, чьи интуитивные движения раскрывают систему. Шесть недель, шесть встреч, одно преображение.</p>
+        <a class="card-cta" href="https://t.me/+2LtMqe6B6EM0MDUy" target="_blank" rel="noopener"><span lang="en">Join the next group →</span><span lang="ru">Записаться в ближайшую группу →</span></a>
       </div>
       <div class="card">
         <span class="num-tag">02</span>
-        <h3>In-person & private sessions</h3>
-        <p>Available in Costa Rica or, by arrangement, elsewhere. One-to-one work or small groups, on request.</p>
-        <a class="card-cta" href="https://t.me/JaneStarck">Enquire →</a>
+        <h3 lang="en">In-person & private sessions</h3>
+        <h3 lang="ru">Личные и частные сессии</h3>
+        <p lang="en">Available in Costa Rica or, by arrangement, elsewhere. One-to-one work or small groups, on request.</p>
+        <p lang="ru">Доступны в Коста-Рике или, по договорённости, в других местах. Индивидуальная работа или малые группы — по запросу.</p>
+        <a class="card-cta" href="https://t.me/JaneStarck"><span lang="en">Enquire →</span><span lang="ru">Узнать →</span></a>
       </div>
       <div class="card">
         <span class="num-tag">03</span>
-        <h3>Systemic mapping</h3>
-        <p>The same lineage applied to bigger living systems: organizations, nations, ecosystems. Premium online format with trained stand-ins. For founders, leadership teams, and anyone trying to feel into a collective body that the spreadsheets cannot show.</p>
-        <a class="card-cta" href="https://t.me/JaneStarck">Enquire about a session →</a>
+        <h3 lang="en">Systemic mapping</h3>
+        <h3 lang="ru">Системное картирование</h3>
+        <p lang="en">The same lineage applied to bigger living systems: organizations, nations, ecosystems. Premium online format with trained stand-ins. For founders, leadership teams, and anyone trying to feel into a collective body that the spreadsheets cannot show.</p>
+        <p lang="ru">Та же традиция, применённая к большим живым системам: организациям, странам, экосистемам. Премиальный онлайн-формат с обученными заместителями. Для основателей, руководящих команд и всех, кто пытается почувствовать коллективное тело, которое не видно в таблицах.</p>
+        <a class="card-cta" href="https://t.me/JaneStarck"><span lang="en">Enquire about a session →</span><span lang="ru">Узнать о сессии →</span></a>
       </div>
       <div class="card">
         <span class="num-tag">04</span>
-        <h3>Leela</h3>
-        <p>The ancient Indian game of self-knowledge — sometimes called the original board game, dating back several thousand years. The dice are the cosmos; the squares are the planes of consciousness; the player is the soul. A single Leela session can reveal the question you didn't know you were living, and where on the path you stand.</p>
-        <a class="card-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSehHDdtrgPYx0zO6TAVknaa_R_bROxjwNUEgZKRHfn9GpyfRw/viewform">Register for the next game →</a>
+        <h3 lang="en">Leela</h3>
+        <h3 lang="ru">Лила</h3>
+        <p lang="en">The ancient Indian game of self-knowledge — sometimes called the original board game, dating back several thousand years. The dice are the cosmos; the squares are the planes of consciousness; the player is the soul. A single Leela session can reveal the question you didn't know you were living, and where on the path you stand.</p>
+        <p lang="ru">Древнеиндийская игра самопознания — её называют первой настольной игрой, ей несколько тысяч лет. Кости — это космос; клетки — планы сознания; игрок — душа. Одна сессия Лилы может раскрыть вопрос, которым вы живёте, сами того не зная, — и показать, где вы стоите на пути.</p>
+        <a class="card-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSehHDdtrgPYx0zO6TAVknaa_R_bROxjwNUEgZKRHfn9GpyfRw/viewform"><span lang="en">Register for the next game →</span><span lang="ru">Записаться на ближайшую игру →</span></a>
       </div>
     </div>
   </div>
@@ -269,14 +333,22 @@
 <section id="kirtan" class="bg-deep">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 05 · Kirtan & retreats</div>
-      <h2 class="sec-title">A sacred gathering<br>in the heart of the <em>jungle</em></h2>
-      <p>Through kirtan, meditation, and devotional practice, Jane invites you to dissolve into sound, reconnect with your essence, and return home to yourself. Whether you are new to kirtan or a lifelong practitioner, you are welcome exactly as you are.</p>
-      <p>Each morning begins at sunrise with mantra and meditation. Each evening closes with deep kirtan under the stars.</p>
+      <div class="sec-label" lang="en">§ 05 · Kirtan & retreats</div>
+      <div class="sec-label" lang="ru">§ 05 · Киртан и ретриты</div>
+      <h2 class="sec-title" lang="en">A sacred gathering<br>in the heart of the <em>jungle</em></h2>
+      <h2 class="sec-title" lang="ru">Священное собрание<br>в сердце <em>джунглей</em></h2>
+      <p lang="en">Through kirtan, meditation, and devotional practice, Jane invites you to dissolve into sound, reconnect with your essence, and return home to yourself. Whether you are new to kirtan or a lifelong practitioner, you are welcome exactly as you are.</p>
+      <p lang="ru">Через киртан, медитацию и преданную практику Джейн приглашает раствориться в звуке, восстановить связь со своей сутью и вернуться домой — к себе. Новичок вы в киртане или давний практик — вас здесь ждут именно такими, какие вы есть.</p>
+      <p lang="en">Each morning begins at sunrise with mantra and meditation. Each evening closes with deep kirtan under the stars.</p>
+      <p lang="ru">Каждое утро начинается на рассвете с мантры и медитации. Каждый вечер закрывается глубоким киртаном под звёздами.</p>
 
-      <div class="pullquote">
+      <div class="pullquote" lang="en">
         When we sing together, we remember something the mind has forgotten — that we are not separate, that love is our nature.
         <span class="by">— Jane Stark</span>
+      </div>
+      <div class="pullquote" lang="ru">
+        Когда мы поём вместе, мы вспоминаем то, что забыл ум: что мы не разделены, что любовь — наша природа.
+        <span class="by">— Джейн Старк</span>
       </div>
     </div>
 
@@ -285,10 +357,13 @@
     </div>
 
     <div class="narrow reveal" style="margin-top: 56px;">
-      <p style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 8px;">Upcoming</p>
-      <p style="font-size: 24px; font-style: italic; line-height: 1.4;">14 – 21 February 2027<br>Seven days of sacred song. Costa Rica.</p>
-      <p style="font-size: 14px; color: var(--ink-soft); margin-top: 8px;">Spaces are limited to preserve the intimacy of the gathering.</p>
-      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 16px;">Reserve your place</a>
+      <p lang="en" style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 8px;">Upcoming</p>
+      <p lang="ru" style="font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 8px;">Ближайшее</p>
+      <p lang="en" style="font-size: 24px; font-style: italic; line-height: 1.4;">14 – 21 February 2027<br>Seven days of sacred song. Costa Rica.</p>
+      <p lang="ru" style="font-size: 24px; font-style: italic; line-height: 1.4;">14 – 21 февраля 2027<br>Семь дней священного пения. Коста-Рика.</p>
+      <p lang="en" style="font-size: 14px; color: var(--ink-soft); margin-top: 8px;">Spaces are limited to preserve the intimacy of the gathering.</p>
+      <p lang="ru" style="font-size: 14px; color: var(--ink-soft); margin-top: 8px;">Мест немного — чтобы сохранить интимность собрания.</p>
+      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 16px;"><span lang="en">Reserve your place</span><span lang="ru">Забронировать место</span></a>
     </div>
   </div>
 </section>
@@ -298,13 +373,19 @@
   <div class="container">
     <div class="homestead-grid reveal">
       <div>
-        <div class="sec-label">§ 06 · The Homestead</div>
-        <h2 class="sec-title">Live <em>alongside</em> us</h2>
-        <p>A few weeks a year, our guesthouse opens to one guest, or one couple, at a time.</p>
-        <p>You wake with the jungle. You join us for morning yoga, OM-chanting, and small family kirtans. You walk the permaculture garden, learn the trees, eat what the day gives. You spend the afternoons however your soul asks — writing, painting, swimming, sitting still — and sit with us again at sundown.</p>
-        <p>This is not a wellness resort. There is no air conditioning. No hot water. No menu. We live simply, and you live as we live. <em>That is the offering.</em></p>
-        <p>What you receive instead is what no resort can sell you: depth. Time alongside Jane outside the format of a session or a stage. The slow re-tuning of a nervous system that has forgotten what it is to be a guest in a real home.</p>
-        <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 16px;">Enquire about a stay</a>
+        <div class="sec-label" lang="en">§ 06 · The Homestead</div>
+        <div class="sec-label" lang="ru">§ 06 · Дом</div>
+        <h2 class="sec-title" lang="en">Live <em>alongside</em> us</h2>
+        <h2 class="sec-title" lang="ru">Жить <em>рядом</em> с нами</h2>
+        <p lang="en">A few weeks a year, our guesthouse opens to one guest, or one couple, at a time.</p>
+        <p lang="ru">Несколько недель в году наш гостевой дом открыт — для одного гостя или одной пары за раз.</p>
+        <p lang="en">You wake with the jungle. You join us for morning yoga, OM-chanting, and small family kirtans. You walk the permaculture garden, learn the trees, eat what the day gives. You spend the afternoons however your soul asks — writing, painting, swimming, sitting still — and sit with us again at sundown.</p>
+        <p lang="ru">Вы просыпаетесь вместе с джунглями. Присоединяетесь к нам на утреннюю йогу, пение ОМ и небольшие семейные киртаны. Гуляете по пермакультурному саду, узнаёте деревья, едите то, что даёт день. Вторую половину дня проводите так, как просит душа — пишете, рисуете, плаваете, сидите в тишине — и снова собираетесь с нами на закате.</p>
+        <p lang="en">This is not a wellness resort. There is no air conditioning. No hot water. No menu. We live simply, and you live as we live. <em>That is the offering.</em></p>
+        <p lang="ru">Это не велнес-курорт. Здесь нет кондиционера. Нет горячей воды. Нет меню. Мы живём просто — и вы живёте так, как живём мы. <em>Это и есть приглашение.</em></p>
+        <p lang="en">What you receive instead is what no resort can sell you: depth. Time alongside Jane outside the format of a session or a stage. The slow re-tuning of a nervous system that has forgotten what it is to be a guest in a real home.</p>
+        <p lang="ru">Взамен вы получаете то, что не продаст ни один курорт: глубину. Время рядом с Джейн вне формата сессии или сцены. Медленное возвращение нервной системы к памяти о том, что значит быть гостем в настоящем доме.</p>
+        <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 16px;"><span lang="en">Enquire about a stay</span><span lang="ru">Узнать о пребывании</span></a>
       </div>
       <div class="photo" role="img" aria-label="The homestead in Costa Rica — guesthouse and permaculture garden."></div>
     </div>
@@ -315,15 +396,23 @@
 <section id="voice">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 07 · Voice Awakening</div>
-      <h2 class="sec-title">Voice <em>Awakening</em></h2>
-      <div class="pullquote">
+      <div class="sec-label" lang="en">§ 07 · Voice Awakening</div>
+      <div class="sec-label" lang="ru">§ 07 · Пробуждение голоса</div>
+      <h2 class="sec-title" lang="en">Voice <em>Awakening</em></h2>
+      <h2 class="sec-title" lang="ru">Пробуждение <em>голоса</em></h2>
+      <div class="pullquote" lang="en">
         Your voice carries your history, your emotions, your truth.
       </div>
-      <p>A gentle one-to-one online space to reconnect with your voice — not only as a musical instrument, but as a pathway to presence, confidence, breath, emotion, and self-awareness.</p>
-      <p>In these private Zoom sessions, we explore vocal freedom and resonance, breath and grounding, Indian devotional repertoire, mantra and mysticism, songs that deeply move you, and emotional expression through the voice.</p>
-      <p>These sessions are for complete beginners and for anyone longing to feel more alive, open, and authentic through sound.</p>
-      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 24px;">Book a session</a>
+      <div class="pullquote" lang="ru">
+        Ваш голос несёт вашу историю, ваши чувства, вашу правду.
+      </div>
+      <p lang="en">A gentle one-to-one online space to reconnect with your voice — not only as a musical instrument, but as a pathway to presence, confidence, breath, emotion, and self-awareness.</p>
+      <p lang="ru">Бережное онлайн-пространство один на один, чтобы восстановить связь со своим голосом — не только как с музыкальным инструментом, но как с путём к присутствию, уверенности, дыханию, чувству и самоосознанию.</p>
+      <p lang="en">In these private Zoom sessions, we explore vocal freedom and resonance, breath and grounding, Indian devotional repertoire, mantra and mysticism, songs that deeply move you, and emotional expression through the voice.</p>
+      <p lang="ru">В этих личных Zoom-сессиях мы исследуем свободу и резонанс голоса, дыхание и заземление, индийский преданный репертуар, мантру и мистику, песни, что трогают вас до глубины, и выражение чувств через голос.</p>
+      <p lang="en">These sessions are for complete beginners and for anyone longing to feel more alive, open, and authentic through sound.</p>
+      <p lang="ru">Эти сессии — для полных новичков и для всех, кто стремится почувствовать себя живее, открытее и подлиннее через звук.</p>
+      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 24px;"><span lang="en">Book a session</span><span lang="ru">Записаться на сессию</span></a>
     </div>
   </div>
 </section>
@@ -332,11 +421,15 @@
 <section id="dances" class="bg-deep">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 08 · Dances</div>
-      <h2 class="sec-title">Dances of <em>Universal Peace</em></h2>
-      <p>Simple circle dances and chants drawn from the world's spiritual traditions — Sufi, Hindu, Buddhist, Christian, Indigenous. No experience required, no choreography to learn. The dance is the prayer.</p>
-      <p>Jane leads the Dances at gatherings and as part of her retreats.</p>
-      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 24px;">See upcoming dances</a>
+      <div class="sec-label" lang="en">§ 08 · Dances</div>
+      <div class="sec-label" lang="ru">§ 08 · Танцы</div>
+      <h2 class="sec-title" lang="en">Dances of <em>Universal Peace</em></h2>
+      <h2 class="sec-title" lang="ru">Танцы <em>Всеобщего Мира</em></h2>
+      <p lang="en">Simple circle dances and chants drawn from the world's spiritual traditions — Sufi, Hindu, Buddhist, Christian, Indigenous. No experience required, no choreography to learn. The dance is the prayer.</p>
+      <p lang="ru">Простые танцы в кругу и распевы из духовных традиций мира — суфийских, индуистских, буддийских, христианских, коренных народов. Опыт не нужен, хореографию учить не надо. Танец — это молитва.</p>
+      <p lang="en">Jane leads the Dances at gatherings and as part of her retreats.</p>
+      <p lang="ru">Джейн ведёт Танцы на собраниях и в рамках своих ретритов.</p>
+      <a class="btn" href="https://t.me/JaneStarck" style="margin-top: 24px;"><span lang="en">See upcoming dances</span><span lang="ru">Ближайшие танцы</span></a>
     </div>
   </div>
 </section>
@@ -345,37 +438,49 @@
 <section id="poetry">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 09 · Poetry</div>
-      <h2 class="sec-title">Poetry</h2>
-      <p>Three books, written in collaboration with Leonid Ilushin. <em>Reflections</em> (Отражения) and <em>I Live You</em> are full poetry collections in Russian. <em>Moon Songs</em> is a bilingual hardcover of original lullabies — Russian and English side by side — written for Jane's children and yours.</p>
-      <p>Jane is also the founder of the <em>Noble Poetry Club</em> theatre in Dubai.</p>
+      <div class="sec-label" lang="en">§ 09 · Poetry</div>
+      <div class="sec-label" lang="ru">§ 09 · Стихи</div>
+      <h2 class="sec-title" lang="en">Poetry</h2>
+      <h2 class="sec-title" lang="ru">Стихи</h2>
+      <p lang="en">Three books, written in collaboration with Leonid Ilushin. <em>Reflections</em> (Отражения) and <em>I Live You</em> are full poetry collections in Russian. <em>Moon Songs</em> is a bilingual hardcover of original lullabies — Russian and English side by side — written for Jane's children and yours.</p>
+      <p lang="ru">Три книги, написанные в соавторстве с Леонидом Илюшиным. <em>Отражения</em> и <em>Я живу тебя</em> — полные поэтические сборники на русском. <em>Moon Songs</em> — двуязычный сборник колыбельных в твёрдом переплёте: русский и английский рядом — для детей Джейн и для ваших.</p>
+      <p lang="en">Jane is also the founder of the <em>Noble Poetry Club</em> theatre in Dubai.</p>
+      <p lang="ru">Джейн также основательница театра <em>Noble Poetry Club</em> в Дубае.</p>
     </div>
 
     <div class="books reveal">
       <div class="book">
         <div class="b-body">
-          <h4>Reflections</h4>
-          <div class="b-meta">Russian · Отражения</div>
-          <p>A poetry collection in Russian, written with Leonid Ilushin.</p>
-          <a class="buy" href="https://www.lulu.com/shop/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D0%B0%D1%80%D0%BA-and-%D0%BB%D0%B5%D0%BE%D0%BD%D0%B8%D0%B4-%D0%B8%D0%BB%D1%8E%D1%88%D0%B8%D0%BD/%D0%BE%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/paperback/product-7k872j2.html" target="_blank" rel="noopener">Buy on Lulu →</a>
+          <h4 lang="en">Reflections</h4>
+          <h4 lang="ru">Отражения</h4>
+          <div class="b-meta" lang="en">Russian · Отражения</div>
+          <div class="b-meta" lang="ru">На русском</div>
+          <p lang="en">A poetry collection in Russian, written with Leonid Ilushin.</p>
+          <p lang="ru">Поэтический сборник на русском, написанный с Леонидом Илюшиным.</p>
+          <a class="buy" href="https://www.lulu.com/shop/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D0%B0%D1%80%D0%BA-and-%D0%BB%D0%B5%D0%BE%D0%BD%D0%B8%D0%B4-%D0%B8%D0%BB%D1%8E%D1%88%D0%B8%D0%BD/%D0%BE%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/paperback/product-7k872j2.html" target="_blank" rel="noopener"><span lang="en">Buy on Lulu →</span><span lang="ru">Купить на Lulu →</span></a>
         </div>
         <div class="b-cover"><img src="images/books/Reflections.jpg" alt="Cover of Reflections (Отражения), a Russian poetry collection." loading="lazy"></div>
       </div>
       <div class="book">
         <div class="b-body">
           <h4>Moon Songs</h4>
-          <div class="b-meta">Bilingual · Russian / English</div>
-          <p>A hardcover collection of original lullabies, with both languages set side by side.</p>
-          <a class="buy" href="https://www.lulu.com/shop/evgeniia-stark-and-kiris-kiss/moon-songs/hardcover/product-dyd24qp.html" target="_blank" rel="noopener">Buy on Lulu →</a>
+          <div class="b-meta" lang="en">Bilingual · Russian / English</div>
+          <div class="b-meta" lang="ru">Двуязычное · русский / английский</div>
+          <p lang="en">A hardcover collection of original lullabies, with both languages set side by side.</p>
+          <p lang="ru">Сборник авторских колыбельных в твёрдом переплёте — оба языка рядом.</p>
+          <a class="buy" href="https://www.lulu.com/shop/evgeniia-stark-and-kiris-kiss/moon-songs/hardcover/product-dyd24qp.html" target="_blank" rel="noopener"><span lang="en">Buy on Lulu →</span><span lang="ru">Купить на Lulu →</span></a>
         </div>
         <div class="b-cover"><img src="images/books/MoonSongs.jpg" alt="Cover of Moon Songs, a bilingual hardcover of original lullabies." loading="lazy"></div>
       </div>
       <div class="book">
         <div class="b-body">
-          <h4>I Live You</h4>
-          <div class="b-meta">Russian · sold out</div>
-          <p>The original Russian-language collection. Republishing on Lulu later this year.</p>
-          <span class="buy" style="border-color: var(--hairline); color: var(--ink-faint);">Returning soon</span>
+          <h4 lang="en">I Live You</h4>
+          <h4 lang="ru">Я живу тебя</h4>
+          <div class="b-meta" lang="en">Russian · sold out</div>
+          <div class="b-meta" lang="ru">На русском · тираж разошёлся</div>
+          <p lang="en">The original Russian-language collection. Republishing on Lulu later this year.</p>
+          <p lang="ru">Оригинальный сборник на русском. Будет переиздан на Lulu в этом году.</p>
+          <span class="buy" style="border-color: var(--hairline); color: var(--ink-faint);"><span lang="en">Returning soon</span><span lang="ru">Скоро вернётся</span></span>
         </div>
         <div class="b-cover"><img src="images/books/ILiveYou.jpeg" alt="Cover of I Live You, the original Russian-language collection." loading="lazy"></div>
       </div>
@@ -387,11 +492,17 @@
 <section id="painting" class="bg-deep">
   <div class="container">
     <div class="narrow reveal">
-      <div class="sec-label">§ 10 · Painting</div>
-      <h2 class="sec-title">Painting</h2>
-      <div class="pullquote">
+      <div class="sec-label" lang="en">§ 10 · Painting</div>
+      <div class="sec-label" lang="ru">§ 10 · Живопись</div>
+      <h2 class="sec-title" lang="en">Painting</h2>
+      <h2 class="sec-title" lang="ru">Живопись</h2>
+      <div class="pullquote" lang="en">
         Jane's art is deep and soft. It doesn't scream. It doesn't show off. It just is. Like nature, like the universe. It doesn't convince you. It doesn't call you for action. It just allows you to be here and now and come closer to your true self.
         <span class="by">— Denis Stark</span>
+      </div>
+      <div class="pullquote" lang="ru">
+        Картины Джейн глубокие и мягкие. Они не кричат. Они не красуются. Они просто есть. Как природа, как вселенная. Они ни в чём не убеждают. Они ни к чему не призывают. Они просто позволяют быть здесь и сейчас — и подойти ближе к самому себе.
+        <span class="by">— Денис Старк</span>
       </div>
     </div>
 
@@ -399,71 +510,100 @@
       <div class="painting" role="listitem"
            data-full="images/paintings/01_Peace-of-mind.jpeg"
            data-title="Peace of Mind"
-           data-meta="51 × 51 cm · oil on canvas · $2,000">
+           data-title-ru="Покой ума"
+           data-meta="51 × 51 cm · oil on canvas · $2,000"
+           data-meta-ru="51 × 51 см · масло, холст · $2,000">
         <div class="frame"><img src="images/paintings/thumbs/01_Peace-of-mind.jpeg" alt="Peace of Mind, oil painting by Jane Stark." loading="lazy"></div>
-        <div class="p-title">Peace of Mind</div>
-        <div class="p-meta">51 × 51 cm · oil on canvas · $2,000</div>
+        <div class="p-title" lang="en">Peace of Mind</div>
+        <div class="p-title" lang="ru">Покой ума</div>
+        <div class="p-meta" lang="en">51 × 51 cm · oil on canvas · $2,000</div>
+        <div class="p-meta" lang="ru">51 × 51 см · масло, холст · $2,000</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/02_Pictures-of-you.jpeg"
            data-title="Pictures of You"
-           data-meta="58 × 58 cm · oil on canvas · $2,400">
+           data-title-ru="Pictures of You"
+           data-meta="58 × 58 cm · oil on canvas · $2,400"
+           data-meta-ru="58 × 58 см · масло, холст · $2,400">
         <div class="frame"><img src="images/paintings/thumbs/02_Pictures-of-you.jpeg" alt="Pictures of You, oil painting by Jane Stark." loading="lazy"></div>
         <div class="p-title">Pictures of You</div>
-        <div class="p-meta">58 × 58 cm · oil on canvas · $2,400</div>
+        <div class="p-meta" lang="en">58 × 58 cm · oil on canvas · $2,400</div>
+        <div class="p-meta" lang="ru">58 × 58 см · масло, холст · $2,400</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/03_Grace-and-ease.jpeg"
            data-title="Grace and Ease"
-           data-meta="76 × 102 cm · oil on canvas · $2,900">
+           data-title-ru="Грация и лёгкость"
+           data-meta="76 × 102 cm · oil on canvas · $2,900"
+           data-meta-ru="76 × 102 см · масло, холст · $2,900">
         <div class="frame"><img src="images/paintings/thumbs/03_Grace-and-ease.jpeg" alt="Grace and Ease, oil painting by Jane Stark." loading="lazy"></div>
-        <div class="p-title">Grace and Ease</div>
-        <div class="p-meta">76 × 102 cm · oil on canvas · $2,900</div>
+        <div class="p-title" lang="en">Grace and Ease</div>
+        <div class="p-title" lang="ru">Грация и лёгкость</div>
+        <div class="p-meta" lang="en">76 × 102 cm · oil on canvas · $2,900</div>
+        <div class="p-meta" lang="ru">76 × 102 см · масло, холст · $2,900</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/04_Counterpoint.jpeg"
            data-title="Counterpoint"
-           data-meta="51 × 51 cm · oil on canvas · $2,100">
+           data-title-ru="Контрапункт"
+           data-meta="51 × 51 cm · oil on canvas · $2,100"
+           data-meta-ru="51 × 51 см · масло, холст · $2,100">
         <div class="frame"><img src="images/paintings/thumbs/04_Counterpoint.jpeg" alt="Counterpoint, oil painting by Jane Stark." loading="lazy"></div>
-        <div class="p-title">Counterpoint</div>
-        <div class="p-meta">51 × 51 cm · oil on canvas · $2,100</div>
+        <div class="p-title" lang="en">Counterpoint</div>
+        <div class="p-title" lang="ru">Контрапункт</div>
+        <div class="p-meta" lang="en">51 × 51 cm · oil on canvas · $2,100</div>
+        <div class="p-meta" lang="ru">51 × 51 см · масло, холст · $2,100</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/05_Thubten.jpeg"
            data-title="Thubten"
-           data-meta="51 × 51 cm · oil on canvas · $2,200">
+           data-title-ru="Тубтен"
+           data-meta="51 × 51 cm · oil on canvas · $2,200"
+           data-meta-ru="51 × 51 см · масло, холст · $2,200">
         <div class="frame"><img src="images/paintings/thumbs/05_Thubten.jpeg" alt="Thubten, oil painting by Jane Stark." loading="lazy"></div>
-        <div class="p-title">Thubten</div>
-        <div class="p-meta">51 × 51 cm · oil on canvas · $2,200</div>
+        <div class="p-title" lang="en">Thubten</div>
+        <div class="p-title" lang="ru">Тубтен</div>
+        <div class="p-meta" lang="en">51 × 51 cm · oil on canvas · $2,200</div>
+        <div class="p-meta" lang="ru">51 × 51 см · масло, холст · $2,200</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/06_Lunar-flower-of-life.jpeg"
            data-title="Lunar Flower of Life"
-           data-meta="48 × 48 cm · oil on canvas · $1,950">
+           data-title-ru="Лунный цветок жизни"
+           data-meta="48 × 48 cm · oil on canvas · $1,950"
+           data-meta-ru="48 × 48 см · масло, холст · $1,950">
         <div class="frame"><img src="images/paintings/thumbs/06_Lunar-flower-of-life.jpeg" alt="Lunar Flower of Life, oil painting by Jane Stark." loading="lazy"></div>
-        <div class="p-title">Lunar Flower of Life</div>
-        <div class="p-meta">48 × 48 cm · oil on canvas · $1,950</div>
+        <div class="p-title" lang="en">Lunar Flower of Life</div>
+        <div class="p-title" lang="ru">Лунный цветок жизни</div>
+        <div class="p-meta" lang="en">48 × 48 cm · oil on canvas · $1,950</div>
+        <div class="p-meta" lang="ru">48 × 48 см · масло, холст · $1,950</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/07_Across-the-universe.jpeg"
            data-title="Across the Universe"
-           data-meta="39 × 29 cm · oil on canvas · $1,800">
+           data-title-ru="Across the Universe"
+           data-meta="39 × 29 cm · oil on canvas · $1,800"
+           data-meta-ru="39 × 29 см · масло, холст · $1,800">
         <div class="frame"><img src="images/paintings/thumbs/07_Across-the-universe.jpeg" alt="Across the Universe, oil painting by Jane Stark." loading="lazy"></div>
         <div class="p-title">Across the Universe</div>
-        <div class="p-meta">39 × 29 cm · oil on canvas · $1,800</div>
+        <div class="p-meta" lang="en">39 × 29 cm · oil on canvas · $1,800</div>
+        <div class="p-meta" lang="ru">39 × 29 см · масло, холст · $1,800</div>
       </div>
       <div class="painting" role="listitem"
            data-full="images/paintings/08_Lu-blue.jpeg"
            data-title="Lu-blue"
-           data-meta="61 × 30 cm · oil on canvas · $1,900">
+           data-title-ru="Lu-blue"
+           data-meta="61 × 30 cm · oil on canvas · $1,900"
+           data-meta-ru="61 × 30 см · масло, холст · $1,900">
         <div class="frame"><img src="images/paintings/thumbs/08_Lu-blue.jpeg" alt="Lu-blue, oil painting by Jane Stark." loading="lazy"></div>
         <div class="p-title">Lu-blue</div>
-        <div class="p-meta">61 × 30 cm · oil on canvas · $1,900</div>
+        <div class="p-meta" lang="en">61 × 30 cm · oil on canvas · $1,900</div>
+        <div class="p-meta" lang="ru">61 × 30 см · масло, холст · $1,900</div>
       </div>
     </div>
 
     <div style="text-align: center; margin-top: 48px;" class="reveal">
-      <a class="btn ghost" href="https://t.me/JaneStarck" target="_blank" rel="noopener">Enquire about a piece or commission</a>
+      <a class="btn ghost" href="https://t.me/JaneStarck" target="_blank" rel="noopener"><span lang="en">Enquire about a piece or commission</span><span lang="ru">Купить или заказать работу</span></a>
     </div>
   </div>
 </section>
@@ -472,20 +612,23 @@
 <footer id="connect">
   <div class="cols reveal">
     <div class="signoff">
-      Letters from Jane arrive when there is something to say — a release, a retreat, a circle opening, a poem worth sending. Not often. Not noisily.
+      <span lang="en">Letters from Jane arrive when there is something to say — a release, a retreat, a circle opening, a poem worth sending. Not often. Not noisily.</span>
+      <span lang="ru">Письма от Джейн приходят тогда, когда есть что сказать — новый релиз, ретрит, открытие круга, стихотворение, которое хочется отправить. Не часто. Не шумно.</span>
       <div style="margin-top: 24px;">
-        <a class="btn ghost" href="https://t.me/JaneStarck">Stay in touch</a>
+        <a class="btn ghost" href="https://t.me/JaneStarck"><span lang="en">Stay in touch</span><span lang="ru">Оставаться на связи</span></a>
       </div>
     </div>
     <div>
-      <h4>Listen</h4>
+      <h4 lang="en">Listen</h4>
+      <h4 lang="ru">Слушать</h4>
       <ul>
         <li><a href="https://open.spotify.com/artist/65gZEqZHTi93CDm1PPctWs" target="_blank" rel="noopener">Spotify</a></li>
         <li><a href="https://www.youtube.com/@janestark" target="_blank" rel="noopener">YouTube</a></li>
       </ul>
     </div>
     <div>
-      <h4>Follow</h4>
+      <h4 lang="en">Follow</h4>
+      <h4 lang="ru">Подписаться</h4>
       <ul>
         <li><a href="https://www.instagram.com/simply.meditation/" target="_blank" rel="noopener">Instagram · @simply.meditation</a></li>
         <li><a href="https://www.instagram.com/nebo.music/" target="_blank" rel="noopener">Instagram · @nebo.music</a></li>
@@ -493,7 +636,8 @@
       </ul>
     </div>
     <div>
-      <h4>Get in touch</h4>
+      <h4 lang="en">Get in touch</h4>
+      <h4 lang="ru">Связаться</h4>
       <ul>
         <li><a href="https://t.me/JaneStarck">Telegram · @JaneStarck</a></li>
         <li><a href="https://wa.me/50660097884">WhatsApp · +506 6009 7884</a></li>
@@ -508,7 +652,7 @@
 
 <!-- Lightbox for paintings -->
 <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Painting viewer">
-  <button class="lb-close" aria-label="Close">Close</button>
+  <button class="lb-close" aria-label="Close"><span lang="en">Close</span><span lang="ru">Закрыть</span></button>
   <img src="" alt="">
   <div class="lb-caption">
     <span class="title"></span>
