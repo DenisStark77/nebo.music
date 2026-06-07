@@ -93,6 +93,29 @@ nav.top .links a::after {
 nav.top .links a:hover { color: var(--ink); }
 nav.top .links a:hover::after { right: 0; }
 nav.top .menu-btn { display: none; background: none; border: 0; cursor: pointer; font-size: 22px; color: var(--ink); }
+nav.top .nav-right { display: flex; align-items: center; gap: 20px; }
+
+/* ---- Language toggle ---- */
+
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 2px;
+  padding-left: 0;
+}
+.lang-toggle button {
+  background: none; border: 0; cursor: pointer;
+  font-family: var(--sans); font-size: 11px; letter-spacing: 0.12em;
+  color: var(--ink-faint); text-transform: uppercase;
+  padding: 4px 4px;
+  transition: color 0.18s ease;
+}
+.lang-toggle button:hover { color: var(--ink); }
+.lang-toggle button[aria-pressed="true"] { color: var(--ink); }
+.lang-toggle .lang-sep { color: var(--ink-faint); font-size: 11px; }
+
+/* ---- Bilingual: hide non-active language ---- */
+
+html[lang="en"] [lang="ru"] { display: none; }
+html[lang="ru"] [lang="en"] { display: none; }
 
 /* ---- Hero ---- */
 
