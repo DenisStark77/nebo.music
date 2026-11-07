@@ -11,8 +11,8 @@
   const STORAGE_KEY = 'nebo-lang';
   const SUPPORTED = ['en', 'ru'];
   const TITLES = {
-    en: 'nebo.music — Jane Stark · the voice of your soul',
-    ru: 'nebo.music — Женя Старк · голос вашей души'
+    en: 'nebo.music – Jane Stark · hear yourself',
+    ru: 'nebo.music – Евгения Старк · услышать себя'
   };
 
   function applyLang(lang) {

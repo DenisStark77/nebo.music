@@ -183,6 +183,14 @@ html[lang="ru"] [lang="en"] { display: none; }
 }
 .btn.on-dark:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 
+/* Two-line hero buttons: main word + smaller, lighter second line */
+.btn.btn-two { text-align: center; padding: 12px 28px; }
+.btn.btn-two .btn-main { display: block; }
+.btn.btn-two .btn-sub {
+  display: block; margin-top: 3px;
+  font-size: 11px; letter-spacing: 0.03em; opacity: 0.72;
+}
+
 .btn.ghost {
   border-color: var(--hairline); color: var(--ink-soft);
   padding: 11px 22px; font-size: 12px;
