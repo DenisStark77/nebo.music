@@ -127,17 +127,15 @@ html[lang="ru"] [lang="en"] { display: none; }
 }
 .hero .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('images/kirtan/hero-kirtan.jpg');
-  background-size: cover; background-position: center top;
-  filter: saturate(0.95) brightness(0.65);
+  background-image: url('images/hero-sand.jpg');
+  background-size: cover; background-position: center 60%;
   z-index: 0;
-  transform-origin: top center;
-  animation: drift 60s ease-in-out infinite alternate;
 }
+/* Desktop veil: dark sand on the left under the text, figure on the right stays bright */
 .hero .hero-veil {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(180deg, rgba(27,23,20,0.15) 0%, rgba(27,23,20,0.45) 70%, rgba(27,23,20,0.65) 100%);
+    linear-gradient(90deg, rgba(27,23,20,0.7) 0%, rgba(27,23,20,0.45) 45%, rgba(27,23,20,0) 62%);
 }
 .hero .hero-inner { position: relative; z-index: 2; max-width: 920px; }
 .hero .label {
@@ -157,12 +155,14 @@ html[lang="ru"] [lang="en"] { display: none; }
 }
 .hero .ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
-@keyframes drift {
-  from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to   { transform: scale(1.10) translate3d(-1.5%, 1%, 0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero .hero-bg { animation: none; transform: scale(1.04); }
+/* Phone: figure and waves at the top, text block at the bottom under a vertical veil */
+@media (max-width: 767px) {
+  .hero { justify-content: flex-end; }
+  .hero .hero-bg { background-position: 66% center; }
+  .hero .hero-veil {
+    background:
+      linear-gradient(180deg, rgba(27,23,20,0) 0%, rgba(27,23,20,0) 40%, rgba(27,23,20,0.8) 62%, rgba(27,23,20,0.9) 100%);
+  }
 }
 
 /* ---- Buttons ---- */
