@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Чей это сценарий? – тест · Евгения Старк</title>
+  <meta name="description" content="Тест на 5 минут: какой из четырёх частых семейных сценариев сейчас громче всего звучит в ваших отношениях. И аудиопрактика «Своё место». Евгения Старк, семейные расстановки.">
+  <meta name="author" content="Евгения Старк">
+  <link rel="canonical" href="https://nebo.music/scenariy/">
+  <meta property="og:site_name" content="nebo.music">
+  <meta property="og:title" content="Чей это сценарий? – тест на 5 минут">
+  <meta property="og:description" content="12 утверждений, 4 семейных сценария. И аудиопрактика «Своё место» на 10 минут.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nebo.music/scenariy/">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C97B3F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1B1714; --ink-soft:rgba(27,23,20,.72); --ink-faint:rgba(27,23,20,.48);
+      --paper:#F5EFE6; --paper-deep:#EAE2D4; --hairline:rgba(27,23,20,.12);
+      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#1F3147;
+      --serif:'Cormorant Garamond','Cormorant',Georgia,serif;
+      --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:20px;line-height:1.55}
+    a{color:inherit}
+    .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+    header.top{border-bottom:1px solid var(--hairline)}
+    header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+    .brand{font-family:var(--serif);font-weight:300;font-size:22px;text-decoration:none;letter-spacing:.01em}
+    .brand span{color:var(--ember)}
+    .back{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft)}
+    .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);margin:56px 0 12px}
+    h1{font-weight:300;font-size:clamp(44px,9vw,72px);line-height:1.02;margin:0 0 18px}
+    h2{font-weight:400;font-size:34px;line-height:1.15;margin:56px 0 14px}
+    h3{font-weight:500;font-size:26px;margin:0 0 8px}
+    .lead{font-size:23px;color:var(--ink-soft);margin:0 0 28px}
+    .note{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--ink-faint);border-left:2px solid var(--hairline);padding-left:14px;margin:24px 0}
+    .how{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft)}
+    .group{margin-top:34px}
+    .glabel{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px}
+    .q{padding:16px 0;border-top:1px solid var(--hairline)}
+    .q p{margin:0 0 10px}
+    .q .n{font-family:var(--sans);font-size:12px;color:var(--ember);margin-right:8px}
+    .opts{display:flex;gap:8px;flex-wrap:wrap}
+    .opts label{flex:1 1 0;min-width:90px;cursor:pointer}
+    .opts input{position:absolute;opacity:0;pointer-events:none}
+    .opts span{display:block;text-align:center;font-family:var(--sans);font-size:14px;padding:10px 6px;border:1px solid var(--hairline);border-radius:999px;background:#fff8;transition:.15s}
+    .opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+    .opts input:focus-visible + span{outline:2px solid var(--ember);outline-offset:2px}
+    .btn{display:inline-block;font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:15px 26px;border-radius:999px;border:0;background:var(--ember);color:#fff;text-decoration:none;cursor:pointer}
+    .btn[disabled]{background:var(--paper-deep);color:var(--ink-faint);cursor:default}
+    .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+    .progress{font-family:var(--sans);font-size:13px;color:var(--ink-faint);margin-left:14px}
+    .actions{margin:32px 0 8px;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+    #result{display:none}
+    .bars{margin:18px 0 8px}
+    .bar{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:10px 0;font-family:var(--sans);font-size:14px}
+    .bar .track{height:10px;background:var(--paper-deep);border-radius:6px;overflow:hidden}
+    .bar .fill{height:100%;background:var(--ember);border-radius:6px;width:0;transition:width .6s ease}
+    .bar .lvl{color:var(--ink-faint);text-align:right}
+    .card{background:#fff6;border:1px solid var(--hairline);border-radius:14px;padding:24px 24px 8px;margin:18px 0}
+    .card .tag{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ember)}
+    .card h4{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin:18px 0 4px;font-weight:500}
+    .card p{margin:0 0 12px}
+    .card.mine{border-color:var(--ember);box-shadow:0 0 0 1px var(--ember) inset}
+    .next{background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
+    .next h2{color:var(--paper)}
+    .next p{color:rgba(245,239,230,.82)}
+    .next .btn.ghost{color:var(--paper);border-color:var(--paper)}
+    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(245,239,230,.6);margin-top:36px}
+    footer{font-family:var(--sans);font-size:12px;color:var(--ink-faint);padding:28px 0 40px}
+    @media (max-width:520px){
+      body{font-size:19px}
+      .bar{grid-template-columns:110px 1fr 56px;font-size:13px}
+      .opts label{min-width:0}
+    }
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a class="brand" href="/">nebo<span>.</span>music</a>
+    <a class="back" href="/#constellations">О расстановках</a>
+  </div></header>
+
+  <main class="wrap">
+    <div class="eyebrow">Не по сценарию · тест</div>
+    <h1>Чей это сценарий?</h1>
+    <p class="lead">Тест на 5 минут: какой из частых семейных сценариев сейчас громче всего звучит в ваших отношениях.</p>
+
+    <div class="how">
+      <p>Отвечайте не «как правильно», а как есть. Тест сравнивает четыре частых семейных сценария – по три утверждения на каждый, всего 12. Названия сценариев появятся после подсчёта, чтобы они не подсказывали ответ.</p>
+    </div>
+
+    <form id="test" novalidate>
+      <div id="questions"></div>
+      <div class="actions">
+        <button type="submit" class="btn" id="go" disabled>Показать результат</button>
+        <span class="progress" id="prog">0 из 12</span>
+      </div>
+    </form>
+
+    <p class="note">Это авторский тест-размышление. Он опирается на идеи системных расстановок – «порядки любви» Берта Хеллингера, понятия скрытой лояльности роду и парентификации (когда ребёнок становится опорой для родителя). Научной проверки как психологическая методика он не проходил и не заменяет диагностику. Если вам сейчас очень тяжело, лучше начать с психотерапевта или врача. Ответы никуда не отправляются – подсчёт идёт прямо в вашем браузере.</p>
+
+    <section id="result" aria-live="polite">
+      <h2>Ваш результат</h2>
+      <div class="bars" id="bars"></div>
+      <p class="how">0–2 – сценарий тихий, почти не влияет. 3–4 – заметный: в каких-то ситуациях берёт управление. 5–6 – громкий: скорее всего, вы узнаете в описании себя.</p>
+      <p class="how" id="tie" hidden>Две группы набрали поровну – так бывает часто. Сценарии переплетаются: «я сама» нередко живёт рядом со «спасательницей».</p>
+      <p class="how">Ниже – все четыре сценария, ваш самый громкий первым. Читайте сначала свой, потом остальные: многое узнаётся в соседних.</p>
+      <div id="cards"></div>
+      <div class="actions">
+        <a class="btn ghost" href="chey-eto-scenariy.pdf" download>Скачать тест в PDF</a>
+        <button type="button" class="btn ghost" id="again">Пройти заново</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="next">
+    <div class="wrap">
+      <h2>Что дальше</h2>
+      <p>Сценарий – это не вы. Это роль, которую когда-то пришлось взять из любви. А роль можно вернуть.</p>
+      <p><strong>Практика «Своё место»</strong> – 10 минут, аудио. Почувствовать опору и своё место в семье.</p>
+      <p><a class="btn" href="https://youtu.be/4B6p-U3rLC0" target="_blank" rel="noopener">Слушать на YouTube</a></p>
+      <p style="margin-top:36px"><strong>Группа «Не по сценарию»</strong> – 6 участниц, 6 встреч в Zoom по 2 часа, у каждой своя расстановка. Старт 4 января. $450, одно место открытое – за донейшен.</p>
+      <p><a class="btn" href="/ne-po-scenariyu/">Подробнее о группе</a></p>
+      <p style="margin-top:28px">Или напишите в директ <a href="https://instagram.com/nebo.music" target="_blank" rel="noopener">@nebo.music</a> слово ГРУППА – отвечу сама.</p>
+      <p class="bio">Евгения Старк. В расстановках с 2012 года, профессионально – с 2021-го, более 300 расстановок. Училась у Сергея Казанского, Бориса Холмянского, Татьяны Фрамуза. Член Constellators International.</p>
+    </div>
+  </section>
+
+  <footer><div class="wrap">© 2026 Евгения Старк · <a href="/">nebo.music</a> · <a href="/script/" lang="en">in English</a></div></footer>
+
+  <script>
+  (function(){
+    var G = {
+      A:{name:'Спасательница', q:[
+        'Я первой замечаю, кому плохо, и помогаю, даже когда не просили.',
+        'Мне неловко, когда заботятся обо мне.',
+        'Если близкому плохо, решить это становится для меня задачей номер один.'],
+        text:'Вы берёте на себя чужие чувства и задачи. Рядом почему-то оказываются те, кого нужно спасать. А потом приходит усталость и обида: «а меня кто?» Это треугольник Карпмана: из Спасателя легко попасть в Жертву («я всё для всех, а мне никто»), оттуда – в Преследователя («вы мне должны»). И дальше по кругу.',
+        from:'Часто так бывает, если в детстве кто-то в семье был слабым, больным или несчастным, и ребёнок рано стал опорой. Это не чья-то вина – так семья справлялась.',
+        ask:'Кого я начала спасать первым – и кто в это время заботился обо мне?',
+        show:'Где ваше место: дочери, а не мамы для своей мамы. И что чужую ношу можно вернуть – с уважением, без чувства вины.'},
+      B:{name:'Вечная дочь', q:[
+        'После разговора с мамой я чувствую себя лет на десять младше.',
+        'Мне до сих пор важно, что родители скажут о моём выборе.',
+        'Я жду, что партнёр сам поймёт, что мне нужно.'],
+        text:'Рядом с родителями вы снова маленькая. Ждёте одобрения, оправдываетесь, обижаетесь. А от партнёра ждёте той заботы, которой не хватило.',
+        from:'Обычно это незавершённое отделение: родитель держался за ребёнка, или ребёнок – за родителя, потому что так было безопаснее.',
+        ask:'Чего я до сих пор жду от мамы – и что из этого могу дать себе сама?',
+        show:'Родителей – большими, себя – взрослой. Иногда для этого достаточно одной фразы, сказанной на своём месте.'},
+      V:{name:'«Я сама»', q:[
+        'Мне проще сделать самой, чем попросить.',
+        'Мужчины рядом со мной часто оказываются слабее.',
+        'Я устаю, но остановиться страшно.'],
+        text:'Проще сделать, чем попросить. Мужчины рядом почему-то слабее. Вы устаёте, но остановиться страшно: кажется, всё рухнет.',
+        from:'Нередко в роду женщины тянули всё на себе: после войн, потерь, разводов. Отсюда семейное правило «на мужчин не рассчитывай».',
+        ask:'Кто в моей семье тоже «всё сама» – и чего ей это стоило?',
+        show:'Судьбы мужчин вашего рода – и каково это: опереться и не потерять себя.'},
+      G:{name:'Верная несчастью', q:[
+        'Когда всё хорошо, я жду подвоха.',
+        'В моей семье женщинам «не везло» с мужчинами.',
+        'Мне кажется неправильным быть счастливее мамы или бабушки.'],
+        text:'Когда всё хорошо, становится тревожно. Счастье как будто незаконно. Вы повторяете трудную судьбу мамы или бабушки – в отношениях, в деньгах, в силах.',
+        from:'Это бессознательная верность: «если мне будет хорошо, я их предам». Берт Хеллингер называл это слепой любовью.',
+        ask:'Чья судьба кажется мне «правильной» для женщины в нашей семье?',
+        show:'Что можно любить своих – и при этом жить свою, более лёгкую жизнь. Это не предательство.'}
+    };
+    var letters = {A:'А',B:'Б',V:'В',G:'Г'}, order=['A','B','V','G'];
+    var box=document.getElementById('questions'), n=0, html='';
+    order.forEach(function(k){
+      html+='<div class="group"><div class="glabel">Группа '+letters[k]+'</div>';
+      G[k].q.forEach(function(t){
+        n++; var id='q'+n;
+        html+='<div class="q"><p><span class="n">'+n+'</span>'+t+'</p><div class="opts" role="radiogroup" aria-label="Утверждение '+n+'">'+
+          '<label><input type="radio" name="'+id+'" value="0" data-g="'+k+'"><span>нет</span></label>'+
+          '<label><input type="radio" name="'+id+'" value="1" data-g="'+k+'"><span>иногда</span></label>'+
+          '<label><input type="radio" name="'+id+'" value="2" data-g="'+k+'"><span>да, про меня</span></label>'+
+          '</div></div>';
+      });
+      html+='</div>';
+    });
+    box.innerHTML=html;
+    var form=document.getElementById('test'), go=document.getElementById('go'), prog=document.getElementById('prog');
+    function answered(){return form.querySelectorAll('input:checked').length}
+    form.addEventListener('change',function(){var a=answered();prog.textContent=a+' из 12';go.disabled=a<12;});
+    function level(s){return s<=2?'тихий':(s<=4?'заметный':'громкий')}
+    form.addEventListener('submit',function(e){
+      e.preventDefault(); if(answered()<12) return;
+      var sc={A:0,B:0,V:0,G:0};
+      form.querySelectorAll('input:checked').forEach(function(i){sc[i.dataset.g]+=+i.value;});
+      var sorted=order.slice().sort(function(a,b){return sc[b]-sc[a]});
+      var top=sc[sorted[0]];
+      document.getElementById('tie').hidden = !(top>0 && sc[sorted[1]]===top);
+      document.getElementById('bars').innerHTML=order.map(function(k){
+        return '<div class="bar"><div>'+letters[k]+' · '+G[k].name+'</div><div class="track"><div class="fill" data-w="'+(sc[k]/6*100)+'"></div></div><div class="lvl">'+sc[k]+' · '+level(sc[k])+'</div></div>';
+      }).join('');
+      document.getElementById('cards').innerHTML=sorted.map(function(k){
+        var g=G[k];
+        return '<article class="card'+(sc[k]===top&&top>0?' mine':'')+'"><div class="tag">Сценарий '+letters[k]+' · '+sc[k]+' из 6</div><h3>'+g.name+'</h3><p>'+g.text+'</p>'+
+          '<h4>Откуда это берётся</h4><p>'+g.from+'</p><h4>Вопрос себе</h4><p><em>'+g.ask+'</em></p><h4>Что может показать расстановка</h4><p>'+g.show+'</p></article>';
+      }).join('');
+      var r=document.getElementById('result'); r.style.display='block';
+      requestAnimationFrame(function(){document.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});});
+      r.scrollIntoView({behavior:'smooth'});
+    });
+    document.getElementById('again').addEventListener('click',function(){
+      form.reset(); prog.textContent='0 из 12'; go.disabled=true;
+      document.getElementById('result').style.display='none';
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Whose Script Is It? – a 5-minute quiz · Jane Stark</title>
+  <meta name="description" content="A 5-minute quiz: which of four common family scripts is loudest in your relationships right now. By Jane Stark, family constellations facilitator.">
+  <meta name="author" content="Jane Stark">
+  <link rel="canonical" href="https://nebo.music/script/">
+  <meta property="og:site_name" content="nebo.music">
+  <meta property="og:title" content="Whose Script Is It? – a 5-minute quiz">
+  <meta property="og:description" content="12 statements, 4 family scripts. Free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nebo.music/script/">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%23C97B3F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1B1714; --ink-soft:rgba(27,23,20,.72); --ink-faint:rgba(27,23,20,.48);
+      --paper:#F5EFE6; --paper-deep:#EAE2D4; --hairline:rgba(27,23,20,.12);
+      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#1F3147;
+      --serif:'Cormorant Garamond','Cormorant',Georgia,serif;
+      --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:20px;line-height:1.55}
+    a{color:inherit}
+    .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+    header.top{border-bottom:1px solid var(--hairline)}
+    header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+    .brand{font-family:var(--serif);font-weight:300;font-size:22px;text-decoration:none;letter-spacing:.01em}
+    .brand span{color:var(--ember)}
+    .back{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft)}
+    .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);margin:56px 0 12px}
+    h1{font-weight:300;font-size:clamp(44px,9vw,72px);line-height:1.02;margin:0 0 18px}
+    h2{font-weight:400;font-size:34px;line-height:1.15;margin:56px 0 14px}
+    h3{font-weight:500;font-size:26px;margin:0 0 8px}
+    .lead{font-size:23px;color:var(--ink-soft);margin:0 0 28px}
+    .note{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--ink-faint);border-left:2px solid var(--hairline);padding-left:14px;margin:24px 0}
+    .how{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft)}
+    .group{margin-top:34px}
+    .glabel{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px}
+    .q{padding:16px 0;border-top:1px solid var(--hairline)}
+    .q p{margin:0 0 10px}
+    .q .n{font-family:var(--sans);font-size:12px;color:var(--ember);margin-right:8px}
+    .opts{display:flex;gap:8px;flex-wrap:wrap}
+    .opts label{flex:1 1 0;min-width:90px;cursor:pointer}
+    .opts input{position:absolute;opacity:0;pointer-events:none}
+    .opts span{display:block;text-align:center;font-family:var(--sans);font-size:14px;padding:10px 6px;border:1px solid var(--hairline);border-radius:999px;background:#fff8;transition:.15s}
+    .opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+    .opts input:focus-visible + span{outline:2px solid var(--ember);outline-offset:2px}
+    .btn{display:inline-block;font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:15px 26px;border-radius:999px;border:0;background:var(--ember);color:#fff;text-decoration:none;cursor:pointer}
+    .btn[disabled]{background:var(--paper-deep);color:var(--ink-faint);cursor:default}
+    .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+    .progress{font-family:var(--sans);font-size:13px;color:var(--ink-faint);margin-left:14px}
+    .actions{margin:32px 0 8px;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+    #result{display:none}
+    .bars{margin:18px 0 8px}
+    .bar{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:10px 0;font-family:var(--sans);font-size:14px}
+    .bar .track{height:10px;background:var(--paper-deep);border-radius:6px;overflow:hidden}
+    .bar .fill{height:100%;background:var(--ember);border-radius:6px;width:0;transition:width .6s ease}
+    .bar .lvl{color:var(--ink-faint);text-align:right}
+    .card{background:#fff6;border:1px solid var(--hairline);border-radius:14px;padding:24px 24px 8px;margin:18px 0}
+    .card .tag{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ember)}
+    .card h4{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin:18px 0 4px;font-weight:500}
+    .card p{margin:0 0 12px}
+    .card.mine{border-color:var(--ember);box-shadow:0 0 0 1px var(--ember) inset}
+    .next{background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
+    .next h2{color:var(--paper)}
+    .next p{color:rgba(245,239,230,.82)}
+    .next .btn.ghost{color:var(--paper);border-color:var(--paper)}
+    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(245,239,230,.6);margin-top:36px}
+    footer{font-family:var(--sans);font-size:12px;color:var(--ink-faint);padding:28px 0 40px}
+    @media (max-width:520px){
+      body{font-size:19px}
+      .bar{grid-template-columns:110px 1fr 56px;font-size:13px}
+      .opts label{min-width:0}
+    }
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a class="brand" href="/">nebo<span>.</span>music</a>
+    <a class="back" href="/off-script/">The Off Script group</a>
+  </div></header>
+
+  <main class="wrap">
+    <div class="eyebrow">Off Script · quiz</div>
+    <h1>Whose Script Is It?</h1>
+    <p class="lead">A 5-minute quiz: which family script is loudest in your relationships right now.</p>
+
+    <div class="how">
+      <p>Answer as things are, not as they “should” be. The quiz compares four common family scripts – three statements each, 12 in total. The script names appear after scoring, so they don’t nudge your answers.</p>
+    </div>
+
+    <form id="test" novalidate>
+      <div id="questions"></div>
+      <div class="actions">
+        <button type="submit" class="btn" id="go" disabled>Show my result</button>
+        <span class="progress" id="prog">0 of 12</span>
+      </div>
+    </form>
+
+    <p class="note">This is a reflective quiz I wrote. It draws on ideas from systemic family constellations – Bert Hellinger’s “orders of love,” hidden loyalty to the family, and parentification (when a child becomes a parent’s emotional support). It is not a validated psychological test and not a diagnosis. If things feel very heavy right now, please start with a therapist or doctor. Your answers aren’t sent anywhere – scoring happens right in your browser.</p>
+
+    <section id="result" aria-live="polite">
+      <h2>Your result</h2>
+      <div class="bars" id="bars"></div>
+      <p class="how">0–2 – quiet, barely affects you. 3–4 – noticeable: takes the wheel in some situations. 5–6 – loud: you’ll probably recognize yourself.</p>
+      <p class="how" id="tie" hidden>Two scripts scored the same – that’s common. Scripts intertwine: “I’ll do it myself” often lives right next to “The Rescuer.”</p>
+      <p class="how">Below are all four scripts, your loudest first. Read yours, then the others – people often recognize themselves in the neighbors too.</p>
+      <div id="cards"></div>
+      <div class="actions">
+        <button type="button" class="btn ghost" id="again">Take it again</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="next">
+    <div class="wrap">
+      <h2>What next</h2>
+      <p>A script isn’t who you are. It’s a role you once took on out of love. And a role can be handed back.</p>
+      <p><strong>Off Script</strong> – a six-week online group: 6 participants, 6 Zoom sessions of 2 hours, a full constellation for each of you. Starts January 4. $450; one spot is open, by donation.</p>
+      <p><a class="btn" href="/off-script/">About the group</a></p>
+      <p style="margin-top:28px">Or message me on Instagram <a href="https://ig.me/m/genia4peace" target="_blank" rel="noopener">@genia4peace</a> – I answer myself.</p>
+      <p class="bio">Jane Stark. In family constellations since 2012, facilitating professionally since 2021 – more than 300 constellations. Trained with Sergey Kazansky, Boris Kholmyansky, Tatiana Framuza. Member of Constellators International.</p>
+    </div>
+  </section>
+
+  <footer><div class="wrap">© 2026 Jane Stark · <a href="/">nebo.music</a> · <a href="/scenariy/">по-русски</a></div></footer>
+
+  <script>
+  (function(){
+    var G = {
+      A:{name:'The Rescuer', q:[
+        'I\u2019m the first to notice when someone\u2019s struggling \u2013 and I help, even when nobody asked.',
+        'I feel awkward when people take care of me.',
+        'If someone close to me is hurting, fixing it becomes my top priority.'],
+        text:'You take on other people\u2019s feelings and problems. Somehow you\u2019re always surrounded by people who need saving. Then come the exhaustion and the resentment: \u201cand who takes care of me?\u201d This is the Drama Triangle (Karpman): from Rescuer it\u2019s easy to slide into Victim (\u201cI do everything for everyone and nobody does anything for me\u201d), and from there into Persecutor (\u201cyou owe me\u201d). And round again.',
+        from:'Someone in the family was weak, ill or unhappy, and the child became their support too early. Nobody\u2019s fault \u2013 that\u2019s how the family coped.',
+        ask:'Who did I start rescuing first \u2013 and who was taking care of me at the time?',
+        show:'Your place \u2013 as a daughter, not as your mother\u2019s mother. And that someone else\u2019s burden can be handed back \u2013 with respect, without guilt.'},
+      B:{name:'The Forever Daughter', q:[
+        'After talking to my mom, I feel about ten years younger.',
+        'It still matters to me what my parents think of my choices.',
+        'I expect my partner to just know what I need.'],
+        text:'Around your parents you shrink back into a little girl: waiting for approval, explaining yourself, getting hurt. And from your partner you expect the care you didn\u2019t get enough of.',
+        from:'An unfinished separation \u2013 a parent held on to the child, or the child held on to the parent, because it felt safer.',
+        ask:'What am I still waiting to get from my mom \u2013 and what of it can I give myself?',
+        show:'Your parents as big, and you as an adult. Sometimes one sentence, said from your own place, is enough.'},
+      V:{name:'\u201cI\u2019ll Do It Myself\u201d', q:[
+        'It\u2019s easier to do it myself than to ask.',
+        'The men in my life often turn out to be weaker than me.',
+        'I\u2019m exhausted, but stopping feels scary.'],
+        text:'Easier to do than to ask. The men around you are somehow weaker. You\u2019re tired, but stopping is scary \u2013 it feels like everything will fall apart.',
+        from:'Women in the family carried everything \u2013 after wars, losses, divorces. Hence the family rule: \u201cdon\u2019t count on men.\u201d',
+        ask:'Who else in my family does \u201ceverything herself\u201d \u2013 and what did it cost her?',
+        show:'The fates of the men in your family \u2013 and what it\u2019s like to lean on someone without losing yourself.'},
+      G:{name:'Loyal to Unhappiness', q:[
+        'When everything is good, I wait for the catch.',
+        'In my family, women have always been \u201cunlucky\u201d with men.',
+        'It feels wrong to be happier than my mom or grandma.'],
+        text:'When things are good, you get anxious. Happiness feels almost illegal. You repeat your mother\u2019s or grandmother\u2019s hard story \u2013 in love, money, energy.',
+        from:'Unconscious loyalty: \u201cif I\u2019m happy, I\u2019m betraying them.\u201d Bert Hellinger called this blind love.',
+        ask:'Whose fate feels like the \u201cright\u201d one for a woman in our family?',
+        show:'That you can love your people \u2013 and still live your own, lighter life. That\u2019s not betrayal.'}
+    };
+    var letters = {A:'A',B:'B',V:'C',G:'D'}, order=['A','B','V','G'];
+    var box=document.getElementById('questions'), n=0, html='';
+    order.forEach(function(k){
+      html+='<div class="group"><div class="glabel">Group '+letters[k]+'</div>';
+      G[k].q.forEach(function(t){
+        n++; var id='q'+n;
+        html+='<div class="q"><p><span class="n">'+n+'</span>'+t+'</p><div class="opts" role="radiogroup" aria-label="Statement '+n+'">'+
+          '<label><input type="radio" name="'+id+'" value="0" data-g="'+k+'"><span>no</span></label>'+
+          '<label><input type="radio" name="'+id+'" value="1" data-g="'+k+'"><span>sometimes</span></label>'+
+          '<label><input type="radio" name="'+id+'" value="2" data-g="'+k+'"><span>yes, that’s me</span></label>'+
+          '</div></div>';
+      });
+      html+='</div>';
+    });
+    box.innerHTML=html;
+    var form=document.getElementById('test'), go=document.getElementById('go'), prog=document.getElementById('prog');
+    function answered(){return form.querySelectorAll('input:checked').length}
+    form.addEventListener('change',function(){var a=answered();prog.textContent=a+' of 12';go.disabled=a<12;});
+    function level(s){return s<=2?'quiet':(s<=4?'noticeable':'loud')}
+    form.addEventListener('submit',function(e){
+      e.preventDefault(); if(answered()<12) return;
+      var sc={A:0,B:0,V:0,G:0};
+      form.querySelectorAll('input:checked').forEach(function(i){sc[i.dataset.g]+=+i.value;});
+      var sorted=order.slice().sort(function(a,b){return sc[b]-sc[a]});
+      var top=sc[sorted[0]];
+      document.getElementById('tie').hidden = !(top>0 && sc[sorted[1]]===top);
+      document.getElementById('bars').innerHTML=order.map(function(k){
+        return '<div class="bar"><div>'+letters[k]+' · '+G[k].name+'</div><div class="track"><div class="fill" data-w="'+(sc[k]/6*100)+'"></div></div><div class="lvl">'+sc[k]+' · '+level(sc[k])+'</div></div>';
+      }).join('');
+      document.getElementById('cards').innerHTML=sorted.map(function(k){
+        var g=G[k];
+        return '<article class="card'+(sc[k]===top&&top>0?' mine':'')+'"><div class="tag">Script '+letters[k]+' · '+sc[k]+' of 6</div><h3>'+g.name+'</h3><p>'+g.text+'</p>'+
+          '<h4>Where it often comes from</h4><p>'+g.from+'</p><h4>A question for you</h4><p><em>'+g.ask+'</em></p><h4>What a constellation can show</h4><p>'+g.show+'</p></article>';
+      }).join('');
+      var r=document.getElementById('result'); r.style.display='block';
+      requestAnimationFrame(function(){document.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});});
+      r.scrollIntoView({behavior:'smooth'});
+    });
+    document.getElementById('again').addEventListener('click',function(){
+      form.reset(); prog.textContent='0 of 12'; go.disabled=true;
+      document.getElementById('result').style.display='none';
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  })();
+  </script>
+</body>
+</html>
