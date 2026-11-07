@@ -154,4 +154,22 @@
       if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLb();
     });
   }
+  // --- Sticky "join the group" button (phones) ---
+  // Visible only between the hero and the footer; CSS hides it on wide screens.
+  const joinSticky = document.querySelector('.join-sticky');
+  const heroEl = document.querySelector('.hero');
+  const footerEl = document.querySelector('footer');
+  if (joinSticky && heroEl && footerEl && 'IntersectionObserver' in window) {
+    let heroVisible = true;
+    let footerVisible = false;
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === heroEl) heroVisible = entry.isIntersecting;
+        if (entry.target === footerEl) footerVisible = entry.isIntersecting;
+      });
+      joinSticky.classList.toggle('show', !heroVisible && !footerVisible);
+    }, { threshold: 0 });
+    io2.observe(heroEl);
+    io2.observe(footerEl);
+  }
 })();
