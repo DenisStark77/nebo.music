@@ -364,6 +364,14 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 8px; display: block;
 }
 .card p { font-size: 17px; }
+.card .card-facts {
+  font-family: var(--sans); font-size: 12px; line-height: 1.6;
+  letter-spacing: 0.02em; color: var(--ink-soft);
+}
+.card .card-note {
+  font-family: var(--sans); font-size: 13px; line-height: 1.5;
+  color: var(--ink-faint);
+}
 .card a.card-cta {
   display: inline-block; margin-top: 8px;
   font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em;
