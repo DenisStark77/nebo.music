@@ -236,6 +236,18 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.06em; margin-top: 20px;
 }
 
+.pullquote.sm {
+  font-size: clamp(20px, 2.2vw, 26px);
+  padding: 8px 0 8px 24px;
+  margin: 28px 0;
+}
+.quiz-link {
+  font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em;
+  margin-top: 36px;
+}
+.quiz-link a { color: var(--ember); text-decoration: none; border-bottom: 1px solid transparent; }
+.quiz-link a:hover { border-bottom-color: var(--ember); }
+
 /* ---- Listen / Albums ---- */
 
 .videos {
