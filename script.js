@@ -23,6 +23,10 @@
     document.querySelectorAll('.lang-toggle button[data-lang]').forEach((btn) => {
       btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
     });
+    // aria-labels that follow the language (e.g. carousel arrows)
+    document.querySelectorAll('[data-label-en]').forEach((el) => {
+      el.setAttribute('aria-label', el.dataset['label' + (lang === 'ru' ? 'Ru' : 'En')]);
+    });
   }
 
   // Sync button state + title with whatever <html lang> already is.
@@ -172,4 +176,43 @@
     io2.observe(heroEl);
     io2.observe(footerEl);
   }
+
+  // --- Book cover carousels ---
+  // Scroll-snap track does the swiping; JS only drives arrows, dots and state.
+  document.querySelectorAll('.book .b-cover').forEach((cover) => {
+    const track = cover.querySelector('.track');
+    const prev = cover.querySelector('.arrow.prev');
+    const next = cover.querySelector('.arrow.next');
+    const dots = cover.querySelector('.dots');
+    if (!track || !prev || !next || !dots) return;
+    const slides = Array.from(track.querySelectorAll('img'));
+    if (slides.length < 2) { prev.remove(); next.remove(); return; }
+    let current = 0;
+    const behavior = reduce ? 'auto' : 'smooth';
+    const goTo = (i) => track.scrollTo({ left: track.clientWidth * i, behavior });
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('aria-label', `${i + 1} / ${slides.length}`);
+      d.addEventListener('click', () => goTo(i));
+      dots.appendChild(d);
+    });
+    const dotEls = Array.from(dots.children);
+    function render() {
+      dotEls.forEach((d, i) => d.setAttribute('aria-current', i === current ? 'true' : 'false'));
+      prev.classList.toggle('is-hidden', current === 0);
+      next.classList.toggle('is-hidden', current === slides.length - 1);
+    }
+    prev.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth, behavior }));
+    next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth, behavior }));
+    let raf = 0;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const i = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth)));
+        if (i !== current) { current = i; render(); }
+      });
+    }, { passive: true });
+    render();
+  });
 })();
