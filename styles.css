@@ -4,12 +4,12 @@
  */
 
 :root {
-  --ink:       #1B1714;
-  --ink-soft:  rgba(27, 23, 20, 0.72);
-  --ink-faint: rgba(27, 23, 20, 0.48);
-  --paper:     #F5EFE6;
-  --paper-deep:#EAE2D4;
-  --hairline:  rgba(27, 23, 20, 0.12);
+  --ink:       #1F1C18;
+  --ink-soft:  rgba(31, 28, 24, 0.72);
+  --ink-faint: rgba(31, 28, 24, 0.48);
+  --paper:     #F1F0EC;
+  --paper-deep:#E3E2DD;
+  --hairline:  rgba(31, 28, 24, 0.12);
 
   --ember:     #C97B3F;
   --lotus:     #C99A9A;
@@ -66,7 +66,7 @@ section.bg-deep { background: var(--paper-deep); }
 
 nav.top {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(245, 239, 230, 0.92);
+  background: rgba(241, 240, 236, 0.92);
   backdrop-filter: saturate(140%) blur(8px);
   -webkit-backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--hairline);
@@ -367,6 +367,19 @@ p:last-child { margin-bottom: 0; }
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 32px; margin-top: 56px;
 }
+/* ---- Constellations: "the shadow" — dark section, variables re-mapped to light ---- */
+
+#constellations {
+  background: #26221E;
+  color: var(--ink);
+  --ink: #ECEAE5;
+  --ink-soft: rgba(236, 234, 229, 0.78);
+  --ink-faint: rgba(236, 234, 229, 0.5);
+  --hairline: rgba(236, 234, 229, 0.16);
+  --paper: #312C27;
+  --paper-deep: #3A342E;
+}
+
 .card {
   border: 1px solid var(--hairline);
   padding: 28px 32px;
@@ -493,12 +506,12 @@ p:last-child { margin-bottom: 0; }
 }
 .lightbox .lb-caption .lb-meta {
   display: block; font-family: var(--sans); font-style: normal;
-  font-size: 11px; letter-spacing: 0.08em; color: rgba(245,239,230,0.7);
+  font-size: 11px; letter-spacing: 0.08em; color: rgba(241,240,236,0.7);
   margin-top: 6px; text-transform: uppercase;
 }
 .lightbox .lb-close {
   position: absolute; top: 24px; right: 24px;
-  background: none; border: 1px solid rgba(245,239,230,0.6);
+  background: none; border: 1px solid rgba(241,240,236,0.6);
   color: var(--paper); padding: 8px 14px;
   font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em;
   cursor: pointer; border-radius: 0;
