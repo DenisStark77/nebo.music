@@ -19,9 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ink:#1B1714; --ink-soft:rgba(27,23,20,.72); --ink-faint:rgba(27,23,20,.48);
-      --paper:#F5EFE6; --paper-deep:#EAE2D4; --hairline:rgba(27,23,20,.12);
-      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#1F3147;
+      --ink:#1F1C18; --ink-soft:rgba(31,28,24,.72); --ink-faint:rgba(31,28,24,.48);
+      --paper:#F1F0EC; --paper-deep:#E3E2DD; --hairline:rgba(31,28,24,.12);
+      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#26221E;
       --serif:'Cormorant Garamond','Cormorant',Georgia,serif;
       --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
     }
@@ -69,17 +69,26 @@
     .card h4{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin:18px 0 4px;font-weight:500}
     .card p{margin:0 0 12px}
     .card.mine{border-color:var(--ember);box-shadow:0 0 0 1px var(--ember) inset}
-    .next{background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
+    .next{--paper:#ECEAE5;background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
     .next h2{color:var(--paper)}
-    .next p{color:rgba(245,239,230,.82)}
+    .next p{color:rgba(236,234,229,.82)}
     .next .btn.ghost{color:var(--paper);border-color:var(--paper)}
-    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(245,239,230,.6);margin-top:36px}
+    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(236,234,229,.6);margin-top:36px}
     footer{font-family:var(--sans);font-size:12px;color:var(--ink-faint);padding:28px 0 40px}
     @media (max-width:520px){
       body{font-size:19px}
       .bar{grid-template-columns:110px 1fr 56px;font-size:13px}
       .opts label{min-width:0}
     }
+    .subscribe{margin:36px 0;padding:28px 0;border-top:1px solid rgba(236,234,229,.18);border-bottom:1px solid rgba(236,234,229,.18)}
+    .subscribe h3{font-weight:400;font-size:26px;margin:0 0 8px;color:var(--paper)}
+    .subscribe p{margin:0 0 18px}
+    .subscribe form{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+    .subscribe input{flex:1 1 180px;min-width:0;font-family:var(--sans);font-size:15px;padding:13px 16px;border-radius:999px;border:1px solid rgba(236,234,229,.35);background:rgba(236,234,229,.06);color:var(--paper)}
+    .subscribe input::placeholder{color:rgba(236,234,229,.5)}
+    .subscribe input:focus{outline:none;border-color:var(--ember)}
+    .subscribe .btn{flex:0 0 auto}
+    @media (max-width:520px){.subscribe input,.subscribe .btn{flex:1 1 100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -127,6 +136,16 @@
       <p>Сценарий – это не вы. Это роль, которую когда-то пришлось взять из любви. А роль можно вернуть.</p>
       <p><strong>Практика «Своё место»</strong> – 10 минут, аудио. Почувствовать опору и своё место в семье.</p>
       <p><a class="btn" href="https://youtu.be/4B6p-U3rLC0" target="_blank" rel="noopener">Слушать на YouTube</a></p>
+      <div class="subscribe">
+        <h3>Письма от Жени</h3>
+        <p>Когда есть что сказать – новый круг, практика, стихотворение. Без спама, отписаться – в один клик.</p>
+        <form action="https://gmail.us21.list-manage.com/subscribe/post?u=977d0bdd549d262e77a53664d&amp;id=8cb695fdd6&amp;f_id=00538de1f0" method="post" target="_blank">
+          <input type="text" name="FNAME" placeholder="Имя" aria-label="Имя" autocomplete="given-name">
+          <input type="email" name="EMAIL" placeholder="Email" aria-label="Электронная почта" autocomplete="email" required>
+          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_977d0bdd549d262e77a53664d_8cb695fdd6" tabindex="-1" value=""></div>
+          <button class="btn" type="submit">Подписаться</button>
+        </form>
+      </div>
       <p style="margin-top:36px"><strong>Группа «Не по сценарию»</strong> – 6 участниц, 6 встреч в Zoom по 2 часа, у каждой своя расстановка. Старт 4 января. $450, одно место открытое – за донейшен.</p>
       <p><a class="btn" href="/ne-po-scenariyu/">Подробнее о группе</a></p>
       <p style="margin-top:28px">Или напишите в директ <a href="https://instagram.com/nebo.music" target="_blank" rel="noopener">@nebo.music</a> слово ГРУППА – отвечу сама.</p>

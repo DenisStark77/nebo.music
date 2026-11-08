@@ -19,9 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ink:#1B1714; --ink-soft:rgba(27,23,20,.72); --ink-faint:rgba(27,23,20,.48);
-      --paper:#F5EFE6; --paper-deep:#EAE2D4; --hairline:rgba(27,23,20,.12);
-      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#1F3147;
+      --ink:#1F1C18; --ink-soft:rgba(31,28,24,.72); --ink-faint:rgba(31,28,24,.48);
+      --paper:#F1F0EC; --paper-deep:#E3E2DD; --hairline:rgba(31,28,24,.12);
+      --ember:#C97B3F; --lotus:#C99A9A; --jungle:#3F4F3D; --midnight:#26221E;
       --serif:'Cormorant Garamond','Cormorant',Georgia,serif;
       --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
     }
@@ -69,17 +69,26 @@
     .card h4{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin:18px 0 4px;font-weight:500}
     .card p{margin:0 0 12px}
     .card.mine{border-color:var(--ember);box-shadow:0 0 0 1px var(--ember) inset}
-    .next{background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
+    .next{--paper:#ECEAE5;background:var(--midnight);color:var(--paper);margin-top:64px;padding:8px 0 48px}
     .next h2{color:var(--paper)}
-    .next p{color:rgba(245,239,230,.82)}
+    .next p{color:rgba(236,234,229,.82)}
     .next .btn.ghost{color:var(--paper);border-color:var(--paper)}
-    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(245,239,230,.6);margin-top:36px}
+    .next .bio{font-family:var(--sans);font-size:13px;line-height:1.6;color:rgba(236,234,229,.6);margin-top:36px}
     footer{font-family:var(--sans);font-size:12px;color:var(--ink-faint);padding:28px 0 40px}
     @media (max-width:520px){
       body{font-size:19px}
       .bar{grid-template-columns:110px 1fr 56px;font-size:13px}
       .opts label{min-width:0}
     }
+    .subscribe{margin:36px 0;padding:28px 0;border-top:1px solid rgba(236,234,229,.18);border-bottom:1px solid rgba(236,234,229,.18)}
+    .subscribe h3{font-weight:400;font-size:26px;margin:0 0 8px;color:var(--paper)}
+    .subscribe p{margin:0 0 18px}
+    .subscribe form{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+    .subscribe input{flex:1 1 180px;min-width:0;font-family:var(--sans);font-size:15px;padding:13px 16px;border-radius:999px;border:1px solid rgba(236,234,229,.35);background:rgba(236,234,229,.06);color:var(--paper)}
+    .subscribe input::placeholder{color:rgba(236,234,229,.5)}
+    .subscribe input:focus{outline:none;border-color:var(--ember)}
+    .subscribe .btn{flex:0 0 auto}
+    @media (max-width:520px){.subscribe input,.subscribe .btn{flex:1 1 100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -127,6 +136,16 @@
       <p><strong>Off Script</strong> – a six-week online group: 6 participants, 6 Zoom sessions of 2 hours, a full constellation for each of you. Starts January 4. $450; one spot is open, by donation.</p>
       <p><a class="btn" href="/off-script/">About the group</a></p>
       <p style="margin-top:28px">Or message me on Instagram <a href="https://ig.me/m/genia4peace" target="_blank" rel="noopener">@genia4peace</a> – I answer myself.</p>
+      <div class="subscribe">
+        <h3>Letters from Jane</h3>
+        <p>When there's something to say – a new circle, a practice, a poem. No spam, unsubscribe in one click.</p>
+        <form action="https://gmail.us21.list-manage.com/subscribe/post?u=977d0bdd549d262e77a53664d&amp;id=8cb695fdd6&amp;f_id=00538de1f0" method="post" target="_blank">
+          <input type="text" name="FNAME" placeholder="First name" aria-label="First name" autocomplete="given-name">
+          <input type="email" name="EMAIL" placeholder="Email" aria-label="Email address" autocomplete="email" required>
+          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_977d0bdd549d262e77a53664d_8cb695fdd6" tabindex="-1" value=""></div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
       <p class="bio">Jane Stark. In family constellations since 2012, facilitating professionally since 2021 – more than 300 constellations. Trained with Sergey Kazansky, Boris Kholmyansky, Tatiana Framuza. Member of Constellators International.</p>
     </div>
   </section>
