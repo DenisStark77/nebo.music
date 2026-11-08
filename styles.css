@@ -247,6 +247,9 @@ p:last-child { margin-bottom: 0; }
 }
 .quiz-link a { color: var(--ember); text-decoration: none; border-bottom: 1px solid transparent; }
 .quiz-link a:hover { border-bottom-color: var(--ember); }
+.poems-link a, a.poems-link { color: var(--ember); text-decoration: none; border-bottom: 1px solid transparent; }
+.poems-link a:hover, a.poems-link:hover { border-bottom-color: var(--ember); }
+p.poems-link, .book p.poems-link { font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em; margin: 0 0 18px; }
 
 /* ---- About: photo + text ---- */
 
