@@ -257,12 +257,17 @@ p:last-child { margin-bottom: 0; }
   border-radius: 50%; object-fit: cover; object-position: 50% 28%;
 }
 .about-text { max-width: 640px; }
-@media (min-width: 900px) {
+/* photo beside the text on every desktop-class width, so it adds no scroll */
+@media (min-width: 768px) {
   .about-grid {
-    grid-template-columns: 280px minmax(0, 640px);
-    gap: 64px; justify-content: center; align-items: start;
+    grid-template-columns: 200px minmax(0, 640px);
+    gap: 40px; justify-content: center; align-items: start;
   }
   .about-photo { position: sticky; top: 96px; }
+  .about-photo img { width: 200px; height: 200px; }
+}
+@media (min-width: 1000px) {
+  .about-grid { grid-template-columns: 280px minmax(0, 640px); gap: 64px; }
   .about-photo img { width: 280px; height: 280px; }
 }
 
